@@ -79,6 +79,10 @@
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
+	<td class="name" nowrap><a href="#new">new ([subject[, extensions[, attributes[, pkey[, md_alg='sha1WithRSAEncryption']]]]])</a></td>
+	<td class="summary">create or generate a new x509_req object.</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#read">read (input[, format='auto'])</a></td>
 	<td class="summary">read x509_req from string or bio input</td>
 	</tr>
@@ -161,6 +165,55 @@
 
     <h2><a name="Functions"></a>Functions</h2>
     <dl class="function">
+    <dt>
+    <a name = "new"></a>
+    <strong>new ([subject[, extensions[, attributes[, pkey[, md_alg='sha1WithRSAEncryption']]]]])</strong>
+    </dt>
+    <dd>
+    create or generate a new x509_req object.
+ Note if not give evp_pkey, will create a new x509_req object,or will generate a signed x509_req object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">subject</span>
+            <span class="types"><span class="type">x509_name</span></span>
+         subject name set to x509_req
+        </li>
+        <li><span class="parameter">extensions</span>
+            <span class="types"><span class="type">stack_of_x509_extension</span></span>
+         add to x509_req
+        </li>
+        <li><span class="parameter">attributes</span>
+            <span class="types"><span class="type">stack_of_x509_attribute</span></span>
+         add to x509_req
+        </li>
+        <li><span class="parameter">pkey</span>
+            <span class="types"><span class="type">evp_pkey</span></span>
+         private key sign the x509_req, and set as public key
+        </li>
+        <li><span class="parameter">md_alg</span>
+            <span class="types"><span class="type">evp_digest</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        ,  only used when pkey exist, and should fellow pkey
+         (<em>default</em> 'sha1WithRSAEncryption')
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">x509_req</span></span>
+        certificate sign request object
+    </ol>
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../modules/csr.html#x509_req">x509_req</a>
+    </ul>
+
+
+</dd>
     <dt>
     <a name = "read"></a>
     <strong>read (input[, format='auto'])</strong>

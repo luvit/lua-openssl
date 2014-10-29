@@ -92,6 +92,18 @@
 	<td class="name" nowrap><a href="#new_sk_extension">new_sk_extension (node_array)</a></td>
 	<td class="summary">Create stack_of_x509_extension object, which mapping to STACK_OF(X509_EXTENSION)</td>
 	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#support">support ()</a></td>
+	<td class="summary">get all x509 certificate supported extensions</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#support">support (extension, true)</a></td>
+	<td class="summary">ask x509_extension object support or not</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#support">support (nid_or_name, true)</a></td>
+	<td class="summary">ask nid or name support or not</td>
+	</tr>
 </table>
 <h2><a href="#Tables">Tables</a></h2>
 <table class="function_list">
@@ -238,6 +250,79 @@
          <li><a href="../modules/x509.extension.html#new_extension">new_extension</a></li>
          <li><a href="../modules/sk.html#">sk</a></li>
     </ul>
+
+
+</dd>
+    <dt>
+    <a name = "support"></a>
+    <strong>support ()</strong>
+    </dt>
+    <dd>
+    get all x509 certificate supported extensions
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        contain all support extension nid</li>
+        <li>
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        contain all support extension info as table node {lname=..., sname=..., nid=...}</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "support"></a>
+    <strong>support (extension, true)</strong>
+    </dt>
+    <dd>
+    ask x509_extension object support or not
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">extension</span>
+            <span class="types"><span class="type">x509_extension</span></span>
+
+        </li>
+        <li><span class="parameter">true</span>
+            <span class="types"><span class="type">boolean</span></span>
+         for supported, false or not
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "support"></a>
+    <strong>support (nid_or_name, true)</strong>
+    </dt>
+    <dd>
+    ask nid or name support or not
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">nid_or_name</span>
+            <span class="types"><span class="type">number</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         for extension
+        </li>
+        <li><span class="parameter">true</span>
+            <span class="types"><span class="type">boolean</span></span>
+         for supported, false or not
+        </li>
+    </ul>
+
+
+
 
 
 </dd>

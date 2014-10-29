@@ -86,6 +86,10 @@
 	<td class="name" nowrap><a href="#read">read (input[, format='auto'])</a></td>
 	<td class="summary">read x509_crl from string or bio input</td>
 	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#reason">reason ()</a></td>
+	<td class="summary">list all support reason info</td>
+	</tr>
 </table>
 <h2><a href="#Class_x509_crl">Class x509_crl </a></h2>
 <table class="function_list">
@@ -263,6 +267,26 @@
     <ul>
          <a href="../modules/crl.html#x509_crl">x509_crl</a>
     </ul>
+
+
+</dd>
+    <dt>
+    <a name = "reason"></a>
+    <strong>reason ()</strong>
+    </dt>
+    <dd>
+    list all support reason info
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        contain support reason node like {lname=...,sname=...,bitnum=...}
+    </ol>
+
+
 
 
 </dd>

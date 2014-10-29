@@ -94,6 +94,10 @@
 	<td class="name" nowrap><a href="#purpose">purpose (purpose)</a></td>
 	<td class="summary">get special purpose info as table</td>
 	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#certtypes">certtypes ([type='standard'])</a></td>
+	<td class="summary">get support certtypes</td>
+	</tr>
 </table>
 <h2><a href="#Class_x509">Class x509 </a></h2>
 <table class="function_list">
@@ -318,6 +322,35 @@
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
 
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "certtypes"></a>
+    <strong>certtypes ([type='standard'])</strong>
+    </dt>
+    <dd>
+    get support certtypes
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">type</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         support 'standard','netscape','extend'
+         (<em>default</em> 'standard')
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        if type is 'standard' or 'netscape', contains node with {lname=...,sname=...,bitname=...},
+                if type is 'extend', contains node with {lname=...,sname=...,nid=...}
     </ol>
 
 
