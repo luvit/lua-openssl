@@ -180,7 +180,15 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#ssl_ctx:bio">ssl_ctx:bio (host_addr[, server=true[, autoretry=true]])</a></td>
-	<td class="summary">create bio and ssl object</td>
+	<td class="summary">create bio object</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ssl_ctx:ssl">ssl_ctx:ssl (bio[, server=false])</a></td>
+	<td class="summary">create ssl object</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#ssl_ctx:ssl">ssl_ctx:ssl (input, ouput[, server=false])</a></td>
+	<td class="summary">create ssl object</td>
 	</tr>
 </table>
 <h2><a href="#Class_ssl">Class ssl </a></h2>
@@ -247,7 +255,7 @@
     <ul>
         <li><span class="parameter">protocol</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         support 'SSLv3', 'SSLv23', 'SSLv2', 'TSLv1', 'DTLSv1', and can be follow by '-server' or '-client'
+         support 'SSLv3', 'SSLv23', 'SSLv2', 'TSLv1', 'TSLv1_1','TSLv1_2','DTLSv1', and can be follow by '_server' or '_client'
         </li>
         <li><span class="parameter">support_ciphers</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
@@ -892,7 +900,7 @@
     <strong>ssl_ctx:bio (host_addr[, server=true[, autoretry=true]])</strong>
     </dt>
     <dd>
-    create bio and ssl object
+    create bio object
 
 
     <h3>Parameters:</h3>
@@ -915,12 +923,77 @@
 
     <h3>Returns:</h3>
     <ol>
-        <li>
+
            <span class="types"><a class="type" href="../modules/ssl.html#ssl_ctx:bio">bio</a></span>
-        bio object</li>
-        <li>
+        bio object
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ssl_ctx:ssl"></a>
+    <strong>ssl_ctx:ssl (bio[, server=false])</strong>
+    </dt>
+    <dd>
+    create ssl object
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bio</span>
+            <span class="types"><a class="type" href="../modules/ssl.html#ssl_ctx:bio">bio</a></span>
+
+        </li>
+        <li><span class="parameter">server</span>
+            <span class="types"><span class="type">boolean</span></span>
+        , true will make ssl server
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
            <span class="types"><a class="type" href="../modules/ssl.html#ssl">ssl</a></span>
-        ssl object</li>
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "ssl_ctx:ssl"></a>
+    <strong>ssl_ctx:ssl (input, ouput[, server=false])</strong>
+    </dt>
+    <dd>
+    create ssl object
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">input</span>
+            <span class="types"><a class="type" href="../modules/ssl.html#ssl_ctx:bio">bio</a></span>
+
+        </li>
+        <li><span class="parameter">ouput</span>
+            <span class="types"><a class="type" href="../modules/ssl.html#ssl_ctx:bio">bio</a></span>
+
+        </li>
+        <li><span class="parameter">server</span>
+            <span class="types"><span class="type">boolean</span></span>
+        , true will make ssl server
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../modules/ssl.html#ssl">ssl</a></span>
+
     </ol>
 
 

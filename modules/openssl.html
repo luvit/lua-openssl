@@ -89,16 +89,24 @@
 	<td class="summary">get last error infomation</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#randome">randome (length[, strong=false])</a></td>
-	<td class="summary">get randome bytes</td>
+	<td class="name" nowrap><a href="#random">random (length[, strong=false])</a></td>
+	<td class="summary">get random bytes</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#object">object (oid, name[, alias=nil])</a></td>
-	<td class="summary">add new object</td>
+	<td class="name" nowrap><a href="#rand_status">rand_status (result)</a></td>
+	<td class="summary">get random generator state</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#object">object (nid_or_name)</a></td>
-	<td class="summary">get object according object nid or name</td>
+	<td class="name" nowrap><a href="#rand_load">rand_load ([file=nil])</a></td>
+	<td class="summary">load rand seed from file</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#rand_write">rand_write ([file=nil])</a></td>
+	<td class="summary">save rand seed to file</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#rand_cleanup">rand_cleanup ()</a></td>
+	<td class="summary">cleanup random genrator</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#engine">engine (engine_id)</a></td>
@@ -206,11 +214,11 @@
 
 </dd>
     <dt>
-    <a name = "randome"></a>
-    <strong>randome (length[, strong=false])</strong>
+    <a name = "random"></a>
+    <strong>random (length[, strong=false])</strong>
     </dt>
     <dd>
-    get randome bytes
+    get random bytes
 
 
     <h3>Parameters:</h3>
@@ -238,27 +246,18 @@
 
 </dd>
     <dt>
-    <a name = "object"></a>
-    <strong>object (oid, name[, alias=nil])</strong>
+    <a name = "rand_status"></a>
+    <strong>rand_status (result)</strong>
     </dt>
     <dd>
-    add new object
+    get random generator state
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">oid</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-        </li>
-        <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-        </li>
-        <li><span class="parameter">alias</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-         (<em>default</em> nil)
+        <li><span class="parameter">result</span>
+            <span class="types"><span class="type">boolean</span></span>
+         true for sucess
         </li>
     </ul>
 
@@ -268,27 +267,70 @@
 
 </dd>
     <dt>
-    <a name = "object"></a>
-    <strong>object (nid_or_name)</strong>
+    <a name = "rand_load"></a>
+    <strong>rand_load ([file=nil])</strong>
     </dt>
     <dd>
-    get object according object nid or name
+    load rand seed from file
 
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">nid_or_name</span>
-            <span class="types"><span class="type">number</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
+        <li><span class="parameter">file</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         path to laod seed, default opensl management
+         (<em>default</em> nil)
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><span class="type">asn1_object</span></span>
-
+           <span class="types"><span class="type">boolean</span></span>
+        result
     </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "rand_write"></a>
+    <strong>rand_write ([file=nil])</strong>
+    </dt>
+    <dd>
+    save rand seed to file
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">file</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         path to save seed, default openssl management
+         (<em>default</em> nil)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        result
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "rand_cleanup"></a>
+    <strong>rand_cleanup ()</strong>
+    </dt>
+    <dd>
+    cleanup random genrator
+
+
+
 
 
 

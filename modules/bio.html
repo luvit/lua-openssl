@@ -65,7 +65,7 @@
 <div id="content">
 
 <h1>Module <code>bio</code></h1>
-<p>openssl.bio module.</p>
+<p>Provide bio module.</p>
 <p>
  bio object mapping to BIO in openssl
  openssl.bio is a help object, it is useful, but rarely use.</p>
@@ -129,6 +129,10 @@
 </table>
 <h2><a href="#Class_bio">Class bio </a></h2>
 <table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#bio:accept">bio:accept ([setup=false])</a></td>
+	<td class="summary">setup ready and accept client connect</td>
+	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#bio:read">bio:read (len)</a></td>
 	<td class="summary">read data from bio object</td>
@@ -559,6 +563,40 @@
     <h2><a name="Class_bio"></a>Class bio </h2>
 
     <dl class="function">
+    <dt>
+    <a name = "bio:accept"></a>
+    <strong>bio:accept ([setup=false])</strong>
+    </dt>
+    <dd>
+    setup ready and accept client connect
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">setup</span>
+            <span class="types"><span class="type">boolean</span></span>
+         true for setup accept bio, false or none will accept client connect
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">boolean</span></span>
+        result only when setup is true
+    </ol>
+     <h3>Or</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../modules/bio.html#bio">bio</a></span>
+        accpeted bio object
+    </ol>
+
+
+
+
+</dd>
     <dt>
     <a name = "bio:read"></a>
     <strong>bio:read (len)</strong>

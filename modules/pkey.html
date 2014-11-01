@@ -66,7 +66,7 @@
 <div id="content">
 
 <h1>Module <code>pkey</code></h1>
-<p>Public/Private key module.</p>
+<p>Provide Public/Private key module.</p>
 <p></p>
     <h3>Usage:</h3>
     <ul>
@@ -132,7 +132,7 @@
 <h2><a href="#Class_evp_pkey">Class evp_pkey </a></h2>
 <table class="function_list">
 	<tr>
-	<td class="name" nowrap><a href="#evp_pkey:export">evp_pkey:export ([only_public=false[, raw_key=false[, pem=true[, passphrase]]]])</a></td>
+	<td class="name" nowrap><a href="#evp_pkey:export">evp_pkey:export ([export_private=false[, raw_key=false[, pem=true[, passphrase]]]])</a></td>
 	<td class="summary">export evp_pkey as string</td>
 	</tr>
 	<tr>
@@ -613,7 +613,7 @@
     <dl class="function">
     <dt>
     <a name = "evp_pkey:export"></a>
-    <strong>evp_pkey:export ([only_public=false[, raw_key=false[, pem=true[, passphrase]]]])</strong>
+    <strong>evp_pkey:export ([export_private=false[, raw_key=false[, pem=true[, passphrase]]]])</strong>
     </dt>
     <dd>
     export evp_pkey as string
@@ -621,9 +621,9 @@
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">only_public</span>
+        <li><span class="parameter">export_private</span>
             <span class="types"><span class="type">boolean</span></span>
-         true for export only public or private
+        , true for export private, or public only
          (<em>default</em> false)
         </li>
         <li><span class="parameter">raw_key</span>
