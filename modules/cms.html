@@ -3,8 +3,8 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <head>
-    <title>Reference</title>
-    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    <title>lua-openssl Docmentation</title>
+    <link rel="stylesheet" href="../ldoc_pale.css" type="text/css" />
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 <div id="navigation">
 <br/>
-<h1>ldoc</h1>
+<h1>lua-openssl</h1>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -58,6 +58,10 @@
   <li><a href="../modules/x509.name.html">x509.name</a></li>
   <li><a href="../modules/csr.html">csr</a></li>
 </ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/readme.md.html">readme</a></li>
+</ul>
 
 </div>
 
@@ -65,14 +69,13 @@
 
 <h1>Module <code>cms</code></h1>
 <p>Provide cms function in lua.</p>
-<p>
- cms are based on apps/cms.c from the OpenSSL dist, so for more information, see the documentation for OpenSSL.
+<p> cms are based on apps/cms.c from the OpenSSL dist, so for more information, see the documentation for OpenSSL.
  cms api need flags, not support "detached", "nodetached", "text", "nointern", "noverify", "nochain", "nocerts",
- "noattr", "binary", "nosigs"
+ "noattr", "binary", "nosigs"</p>
+
 <p> Decrypts the S/MIME message in the BIO object and output the results to BIO object.
  recipcert is a CERT for one of the recipients. recipkey specifies the private key matching recipcert.
- Headers is an array of headers to prepend to the message, they will not be included in the encoded section.
-</p>
+ Headers is an array of headers to prepend to the message, they will not be included in the encoded section.</p>
     <h3>Usage:</h3>
     <ul>
         <pre class="example">
@@ -165,6 +168,8 @@
 
            <span class="types"><span class="type">cms</span></span>
 
+
+
     </ol>
 
 
@@ -184,9 +189,13 @@
         <li><span class="parameter">input</span>
             <span class="types"><span class="type">bio</span></span>
 
+
+
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
          (<em>default</em> 0)
         </li>
@@ -196,6 +205,8 @@
     <ol>
 
            <span class="types"><span class="type">cms</span></span>
+
+
 
     </ol>
 
@@ -216,13 +227,19 @@
         <li><span class="parameter">input</span>
             <span class="types"><span class="type">bio</span></span>
 
+
+
         </li>
         <li><span class="parameter">md_alg</span>
             <span class="types"><span class="type">evp_digest</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
          (<em>default</em> 0)
         </li>
@@ -232,6 +249,8 @@
     <ol>
 
            <span class="types"><span class="type">cms</span></span>
+
+
 
     </ol>
 
@@ -256,13 +275,19 @@
         <li><span class="parameter">input</span>
             <span class="types"><span class="type">bio</span></span>
 
+
+
         </li>
         <li><span class="parameter">cipher_alg</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">evp_cipher</span></span>
 
+
+
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
          (<em>default</em> 0)
         </li>
@@ -277,6 +302,8 @@
     <ol>
 
            <span class="types"><span class="type">cms</span></span>
+
+
 
     </ol>
 
@@ -297,13 +324,19 @@
         <li><span class="parameter">message</span>
             <span class="types"><span class="type">cms</span></span>
 
+
+
         </li>
         <li><span class="parameter">pkey</span>
             <span class="types"><span class="type">evp_pkey</span></span>
 
+
+
         </li>
         <li><span class="parameter">recipt</span>
             <span class="types"><span class="type">x509</span></span>
+
+
 
         </li>
         <li><span class="parameter">dcount</span>
@@ -316,6 +349,8 @@
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
          (<em>default</em> 0)
         </li>
@@ -330,6 +365,8 @@
     <ol>
 
            <span class="types"><span class="type">boolean</span></span>
+
+
 
     </ol>
 
@@ -350,17 +387,25 @@
         <li><span class="parameter">cert</span>
             <span class="types"><span class="type">x509</span></span>
 
+
+
         </li>
         <li><span class="parameter">pkey</span>
             <span class="types"><span class="type">evp_pkey</span></span>
+
+
 
         </li>
         <li><span class="parameter">input_data</span>
             <span class="types"><span class="type">bio</span></span>
 
+
+
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
          (<em>default</em> 0)
         </li>
@@ -390,6 +435,8 @@
         <li><span class="parameter">signed</span>
             <span class="types"><span class="type">cms</span></span>
 
+
+
         </li>
         <li><span class="parameter">verify_mode</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
@@ -398,17 +445,25 @@
         <li><span class="parameter">singers</span>
             <span class="types"><span class="type">stack_of_x509</span></span>
 
+
+
         </li>
         <li><span class="parameter">message</span>
             <span class="types"><span class="type">bio</span></span>
+
+
 
         </li>
         <li><span class="parameter">out</span>
             <span class="types"><span class="type">bio</span></span>
 
+
+
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
          (<em>default</em> 0)
         </li>
@@ -438,6 +493,8 @@
         <li><span class="parameter">digested</span>
             <span class="types"><span class="type">cms</span></span>
 
+
+
         </li>
         <li><span class="parameter">verify_mode</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
@@ -453,6 +510,8 @@
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
          (<em>default</em> 0)
         </li>
@@ -482,6 +541,8 @@
         <li><span class="parameter">cms</span>
             <span class="types"><span class="type">cms</span></span>
 
+
+
         </li>
         <li><span class="parameter">verify_mode</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
@@ -490,17 +551,25 @@
         <li><span class="parameter">source</span>
             <span class="types"><span class="type">cms</span></span>
 
+
+
         </li>
         <li><span class="parameter">certs</span>
             <span class="types"><span class="type">stack_of_x509</span></span>
+
+
 
         </li>
         <li><span class="parameter">store</span>
             <span class="types"><span class="type">x509_store</span></span>
 
+
+
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
          (<em>default</em> 0)
         </li>
@@ -530,6 +599,8 @@
         <li><span class="parameter">input</span>
             <span class="types"><span class="type">bio</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
         <li><span class="parameter">format</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
@@ -547,6 +618,8 @@
     <ol>
 
            <span class="types"><span class="type">cms</span></span>
+
+
 
     </ol>
 
@@ -567,22 +640,32 @@
         <li><span class="parameter">cms</span>
             <span class="types"><span class="type">cms</span></span>
 
+
+
         </li>
         <li><span class="parameter">out</span>
             <span class="types"><span class="type">bio</span></span>
+
+
 
         </li>
         <li><span class="parameter">in</span>
             <span class="types"><span class="type">bio</span></span>
 
+
+
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
          (<em>default</em> 0)
         </li>
         <li><span class="parameter">format</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
          (<em>default</em> 'smime')
         </li>
@@ -592,6 +675,8 @@
     <ol>
 
            <span class="types"><span class="type">boolean</span></span>
+
+
 
     </ol>
 
@@ -612,6 +697,8 @@
         <li><span class="parameter">input</span>
             <span class="types"><span class="type">bio</span></span>
 
+
+
         </li>
         <li><span class="parameter">alg</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
@@ -619,6 +706,8 @@
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
          (<em>default</em> 0)
         </li>
@@ -628,6 +717,8 @@
     <ol>
 
            <span class="types"><span class="type">cms</span></span>
+
+
 
     </ol>
 
@@ -648,17 +739,25 @@
         <li><span class="parameter">cms</span>
             <span class="types"><span class="type">cms</span></span>
 
+
+
         </li>
         <li><span class="parameter">input</span>
             <span class="types"><span class="type">bio</span></span>
+
+
 
         </li>
         <li><span class="parameter">out</span>
             <span class="types"><span class="type">bio</span></span>
 
+
+
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
          (<em>default</em> 0)
         </li>
@@ -668,6 +767,8 @@
     <ol>
 
            <span class="types"><span class="type">boolean</span></span>
+
+
 
     </ol>
 
@@ -688,17 +789,25 @@
         <li><span class="parameter">input</span>
             <span class="types"><span class="type">bio</span></span>
 
+
+
         </li>
         <li><span class="parameter">cipher_alg</span>
             <span class="types"><span class="type">cipher</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
         </li>
         <li><span class="parameter">key</span>
             <span class="types"><span class="type">strig</span></span>
 
+
+
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
          (<em>default</em> 0)
         </li>
@@ -728,17 +837,25 @@
         <li><span class="parameter">encrypted</span>
             <span class="types"><span class="type">cms</span></span>
 
+
+
         </li>
         <li><span class="parameter">key</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
         </li>
         <li><span class="parameter">out</span>
             <span class="types"><span class="type">bio</span></span>
 
+
+
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
          (<em>default</em> 0)
         </li>

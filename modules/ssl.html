@@ -3,8 +3,8 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <head>
-    <title>Reference</title>
-    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    <title>lua-openssl Docmentation</title>
+    <link rel="stylesheet" href="../ldoc_pale.css" type="text/css" />
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 <div id="navigation">
 <br/>
-<h1>ldoc</h1>
+<h1>lua-openssl</h1>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -60,6 +60,10 @@
   <li><a href="../modules/x509.name.html">x509.name</a></li>
   <li><a href="../modules/csr.html">csr</a></li>
 </ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/readme.md.html">readme</a></li>
+</ul>
 
 </div>
 
@@ -67,7 +71,9 @@
 
 <h1>Module <code>ssl</code></h1>
 <p>Provide ssl function in lua.</p>
-<p></p>
+<p>
+
+</p>
     <h3>Usage:</h3>
     <ul>
         <pre class="example">
@@ -80,7 +86,7 @@
 <table class="function_list">
 	<tr>
 	<td class="name" nowrap><a href="#ctx_new">ctx_new (protocol[, support_ciphers])</a></td>
-	<td class="summary">create ssl_ctx object, which mapping to SSL_CTX in openssl.</td>
+	<td class="summary">create ssl<em>ctx object, which mapping to SSL</em>CTX in openssl.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#alert_string">alert_string (alert[, long=false])</a></td>
@@ -112,7 +118,7 @@
 	<tr>
 	<td class="name" nowrap><a href="#ssl_ctx:mode">ssl_ctx:mode (clear, mode[, ...])</a></td>
 	<td class="summary">clean given mode
- mode support 'enable_partial_write','accept_moving_write_buffer','auto_retry','no_auto_chain','release_buffers'</td>
+ mode support 'enable<em>partial</em>write','accept<em>moving</em>write<em>buffer','auto</em>retry','no<em>auto</em>chain','release_buffers'</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#ssl_ctx:options">ssl_ctx:options (option, new)</a></td>
@@ -142,7 +148,7 @@
 	<td class="name" nowrap><a href="#ssl_ctx:quiet_shutdown">ssl_ctx:quiet_shutdown ()</a></td>
 	<td class="summary">get quit_shutdown is set or not
  Normally when a SSL connection is finished, the parties must send out
- "close notify" alert messages using ***SSL:shutdown"*** for a clean shutdown.</td>
+ "close notify" alert messages using <strong><em>SSL:shutdown"</em></strong> for a clean shutdown.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#ssl_ctx:quiet_shutdown">ssl_ctx:quiet_shutdown (quiet)</a></td>
@@ -151,7 +157,7 @@
 	<tr>
 	<td class="name" nowrap><a href="#ssl_ctx:verify_locations">ssl_ctx:verify_locations (cafile, capath)</a></td>
 	<td class="summary">set verify locations with cafile and capath
- ssl_ctx:verify_locations specifies the locations for *ctx*, at
+ ssl<em>ctx:verify</em>locations specifies the locations for <em>ctx</em>, at
  which CA certificates for verification purposes are located.</td>
 	</tr>
 	<tr>
@@ -248,14 +254,14 @@
     <strong>ctx_new (protocol[, support_ciphers])</strong>
     </dt>
     <dd>
-    create ssl_ctx object, which mapping to SSL_CTX in openssl.
+    create ssl<em>ctx object, which mapping to SSL</em>CTX in openssl.
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">protocol</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-         support 'SSLv3', 'SSLv23', 'SSLv2', 'TSLv1', 'TSLv1_1','TSLv1_2','DTLSv1', and can be follow by '_server' or '_client'
+         support 'SSLv3', 'SSLv23', 'SSLv2', 'TSLv1', 'TSLv1<em>1','TSLv1</em>2','DTLSv1', and can be follow by '<em>server' or '</em>client'
         </li>
         <li><span class="parameter">support_ciphers</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
@@ -267,6 +273,8 @@
     <ol>
 
            <span class="types"><a class="type" href="../modules/ssl.html#ssl">ssl_ctx</a></span>
+
+
 
     </ol>
 
@@ -287,9 +295,13 @@
         <li><span class="parameter">alert</span>
             <span class="types"><span class="type">number</span></span>
 
+
+
         </li>
         <li><span class="parameter">long</span>
             <span class="types"><span class="type">boolean</span></span>
+
+
 
          (<em>default</em> false)
         </li>
@@ -326,9 +338,13 @@
         <li><span class="parameter">pkey</span>
             <span class="types"><span class="type">evp_pkey</span></span>
 
+
+
         </li>
         <li><span class="parameter">cert</span>
             <span class="types"><span class="type">x509</span></span>
+
+
 
         </li>
     </ul>
@@ -363,9 +379,13 @@
         <li><span class="parameter">clientca</span>
             <span class="types"><span class="type">x509</span></span>
 
+
+
         </li>
         <li><span class="parameter">extra_chain_cert_array</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
         </li>
     </ul>
@@ -398,8 +418,12 @@
         <li><span class="parameter">tmp_cb</span>
             <span class="types"><span class="type">function</span></span>
 
+
+
         </li>
         <li><span class="parameter">vararg</span>
+
+
 
         </li>
     </ul>
@@ -426,6 +450,8 @@
         <li><span class="parameter">key_pem</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
     </ul>
 
@@ -451,6 +477,8 @@
         <li><span class="parameter">curvename</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
     </ul>
 
@@ -465,7 +493,7 @@
     </dt>
     <dd>
     clean given mode
- mode support 'enable_partial_write','accept_moving_write_buffer','auto_retry','no_auto_chain','release_buffers'
+ mode support 'enable<em>partial</em>write','accept<em>moving</em>write<em>buffer','auto</em>retry','no<em>auto</em>chain','release_buffers'
 
 
     <h3>Parameters:</h3>
@@ -477,8 +505,12 @@
         <li><span class="parameter">mode</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
         <li><span class="parameter">...</span>
+
+
 
         </li>
     </ul>
@@ -487,10 +519,14 @@
     <ol>
         <li>
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-        </li>
+
+
+</li>
         <li>
            <span class="types"><span class="type">...</span></span>
-        </li>
+
+
+</li>
     </ol>
 
 
@@ -519,9 +555,9 @@
     <ul>
         <li><span class="parameter">option</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-        , support "microsoft_sess_id_bug", "netscape_challenge_bug", "netscape_reuse_cipher_change_bug",
- "sslref2_reuse_cert_type_bug", "microsoft_big_sslv3_buffer", "msie_sslv3_rsa_padding","ssleay_080_client_dh_bug",
- "tls_d5_bug","tls_block_padding_bug","dont_insert_empty_fragments","all",
+        , support "microsoft<em>sess</em>id<em>bug", "netscape</em>challenge<em>bug", "netscape</em>reuse<em>cipher</em>change<em>bug",
+ "sslref2</em>reuse<em>cert</em>type<em>bug", "microsoft</em>big<em>sslv3</em>buffer", "msie<em>sslv3</em>rsa<em>padding","ssleay</em>080<em>client</em>dh<em>bug",
+ "tls</em>d5<em>bug","tls</em>block<em>padding</em>bug","dont<em>insert</em>empty_fragments","all",
         </li>
         <li><span class="parameter">new</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
@@ -550,9 +586,9 @@
         </li>
         <li><span class="parameter">option</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-        , support "microsoft_sess_id_bug", "netscape_challenge_bug", "netscape_reuse_cipher_change_bug",
- "sslref2_reuse_cert_type_bug", "microsoft_big_sslv3_buffer", "msie_sslv3_rsa_padding","ssleay_080_client_dh_bug",
- "tls_d5_bug","tls_block_padding_bug","dont_insert_empty_fragments","all",
+        , support "microsoft<em>sess</em>id<em>bug", "netscape</em>challenge<em>bug", "netscape</em>reuse<em>cipher</em>change<em>bug",
+ "sslref2</em>reuse<em>cert</em>type<em>bug", "microsoft</em>big<em>sslv3</em>buffer", "msie<em>sslv3</em>rsa<em>padding","ssleay</em>080<em>client</em>dh<em>bug",
+ "tls</em>d5<em>bug","tls</em>block<em>padding</em>bug","dont<em>insert</em>empty_fragments","all",
         </li>
         <li><span class="parameter">new</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
@@ -596,6 +632,8 @@
     <ul>
         <li><span class="parameter">timeout</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
         </li>
     </ul>
@@ -659,7 +697,7 @@
     <dd>
     get quit_shutdown is set or not
  Normally when a SSL connection is finished, the parties must send out
- "close notify" alert messages using ***SSL:shutdown"*** for a clean shutdown.
+ "close notify" alert messages using <strong><em>SSL:shutdown"</em></strong> for a clean shutdown.
 
 
 
@@ -687,9 +725,9 @@
         <li><span class="parameter">quiet</span>
             <span class="types"><span class="type">boolean</span></span>
 
- When setting the "quiet shutdown" flag to 1, ***SSL:shutdown*** will set the internal flags
- to SSL_SENT_SHUTDOWN|SSL_RECEIVED_SHUTDOWN. ***SSL:shutdown*** then behaves like
- ***SSL:set_shutdown*** called with SSL_SENT_SHUTDOWN|SSL_RECEIVED_SHUTDOWN.
+ When setting the "quiet shutdown" flag to 1, <strong><em>SSL:shutdown</em></strong> will set the internal flags
+ to SSL<em>SENT</em>SHUTDOWN|SSL<em>RECEIVED</em>SHUTDOWN. <strong><em>SSL:shutdown</em></strong> then behaves like
+ <strong>*SSL:set_shutdown*</strong> called with SSL<em>SENT</em>SHUTDOWN|SSL<em>RECEIVED</em>SHUTDOWN.
  The session is thus considered to be shutdown, but no "close notify" alert
  is sent to the peer. This behaviour violates the TLS standard.
  The default is normal shutdown behaviour as described by the TLS standard.
@@ -713,9 +751,9 @@
     </dt>
     <dd>
     set verify locations with cafile and capath
- ssl_ctx:verify_locations specifies the locations for *ctx*, at
+ ssl<em>ctx:verify</em>locations specifies the locations for <em>ctx</em>, at
  which CA certificates for verification purposes are located.  The certificates
- available via *CAfile* and *CApath* are trusted.
+ available via <em>CAfile</em> and <em>CApath</em> are trusted.
 
 
     <h3>Parameters:</h3>
@@ -723,9 +761,13 @@
         <li><span class="parameter">cafile</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
         <li><span class="parameter">capath</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
         </li>
     </ul>
@@ -774,6 +816,8 @@
         <li><span class="parameter">store</span>
             <span class="types"><span class="type">x509_store</span></span>
 
+
+
         </li>
     </ul>
 
@@ -820,6 +864,8 @@
     <ul>
         <li><span class="parameter">depth</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
         </li>
     </ul>
@@ -879,7 +925,7 @@
         <li><span class="parameter">verifycb</span>
             <span class="types"><span class="type">function</span></span>
          if mode is 'none', not need this
- verifycb should like int function(int preverify_ok,X509_STORE_CTX ctx) return 0 to end,1 to continue
+ verifycb should like int function(int preverify<em>ok,X509</em>STORE_CTX ctx) return 0 to end,1 to continue
          (<em>default</em> nil)
         </li>
     </ul>
@@ -911,11 +957,13 @@
         </li>
         <li><span class="parameter">server</span>
             <span class="types"><span class="type">boolean</span></span>
-        , true listen at host_addr,false connect to host_addr
+        , true listen at host<em>addr,false connect to host</em>addr
          (<em>default</em> true)
         </li>
         <li><span class="parameter">autoretry</span>
             <span class="types"><span class="type">boolean</span></span>
+
+
 
          (<em>default</em> true)
         </li>
@@ -945,6 +993,8 @@
         <li><span class="parameter">bio</span>
             <span class="types"><a class="type" href="../modules/ssl.html#ssl_ctx:bio">bio</a></span>
 
+
+
         </li>
         <li><span class="parameter">server</span>
             <span class="types"><span class="type">boolean</span></span>
@@ -957,6 +1007,8 @@
     <ol>
 
            <span class="types"><a class="type" href="../modules/ssl.html#ssl">ssl</a></span>
+
+
 
     </ol>
 
@@ -977,9 +1029,13 @@
         <li><span class="parameter">input</span>
             <span class="types"><a class="type" href="../modules/ssl.html#ssl_ctx:bio">bio</a></span>
 
+
+
         </li>
         <li><span class="parameter">ouput</span>
             <span class="types"><a class="type" href="../modules/ssl.html#ssl_ctx:bio">bio</a></span>
+
+
 
         </li>
         <li><span class="parameter">server</span>
@@ -993,6 +1049,8 @@
     <ol>
 
            <span class="types"><a class="type" href="../modules/ssl.html#ssl">ssl</a></span>
+
+
 
     </ol>
 
@@ -1076,6 +1134,8 @@
 
            <span class="types"><a class="type" href="../modules/ssl.html#ssl">ssl_ctx</a></span>
 
+
+
     </ol>
 
 
@@ -1094,6 +1154,8 @@
     <ul>
         <li><span class="parameter">ctx</span>
             <span class="types"><a class="type" href="../modules/ssl.html#ssl">ssl_ctx</a></span>
+
+
 
         </li>
     </ul>
@@ -1158,6 +1220,8 @@
         <li><span class="parameter">mode</span>
             <span class="types"><span class="type">boolean</span></span>
 
+
+
         </li>
     </ul>
 
@@ -1190,26 +1254,25 @@
     <ul>
         <li><span class="parameter">arg</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-  certificate:  return SSL certificates
+          certificate:  return SSL certificates
   fd: return file or network connect fd
   rfd:
   wfd:
-  client_CA_list
+  client<em>CA</em>list
   read_ahead: -> boolean
-  shared_ciphers: string
-  cipher_list -> string
-  verify_mode: number
-  verify_depth
-  state_string
-  state_string_long
-  rstate_string
-  rstate_string_long
+  shared<em>ciphers: string
+  cipher</em>list -> string
+  verify<em>mode: number
+  verify</em>depth
+  state<em>string
+  state</em>string<em>long
+  rstate</em>string
+  rstate<em>string</em>long
   iversion
   version
-  default_timeout,
+  default<em>timeout,
   certificates
-  verify_result
+  verify</em>result
   state
   state_string
         </li>
@@ -1237,15 +1300,14 @@
     <ul>
         <li><span class="parameter">arg</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
-
-  certificate:  return SSL certificates
+          certificate:  return SSL certificates
   fd: return file or network connect fd
   rfd:
   wfd:
-  client_CA:
-  read_ahead
-  cipher_list
-  verify_depth
+  client<em>CA:
+  read</em>ahead
+  cipher<em>list
+  verify</em>depth
   purpose:
   trust:
   verify_result

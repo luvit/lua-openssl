@@ -3,8 +3,8 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <head>
-    <title>Reference</title>
-    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    <title>lua-openssl Docmentation</title>
+    <link rel="stylesheet" href="../ldoc_pale.css" type="text/css" />
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 <div id="navigation">
 <br/>
-<h1>ldoc</h1>
+<h1>lua-openssl</h1>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -59,6 +59,10 @@
   <li><a href="../modules/x509.name.html">x509.name</a></li>
   <li><a href="../modules/csr.html">csr</a></li>
 </ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/readme.md.html">readme</a></li>
+</ul>
 
 </div>
 
@@ -66,8 +70,7 @@
 
 <h1>Module <code>crl</code></h1>
 <p>Provide crl module.</p>
-<p>
- create and manage x509 certificate sign request</p>
+<p> create and manage x509 certificate sign request</p>
     <h3>Usage:</h3>
     <ul>
         <pre class="example">
@@ -115,7 +118,7 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#x509_crl:check">x509_crl:check (pkey[, flags=0])</a></td>
-	<td class="summary">check x509_crl with evp_pkey</td>
+	<td class="summary">check x509<em>crl with evp</em>pkey</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#x509_crl:parse">x509_crl:parse ([default=true])</a></td>
@@ -190,14 +193,16 @@
     <strong>new ([revoked_list[, cacert[, capkey[, md_alg[, period=7*24*3600]]]]])</strong>
     </dt>
     <dd>
-    create or generate a new x509_crl object.
- Note if not give evp_pkey, will create a new x509_crl object,if give will generate a signed x509_crl object.
+    create or generate a new x509<em>crl object.
+ Note if not give evp</em>pkey, will create a new x509<em>crl object,if give will generate a signed x509</em>crl object.
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">revoked_list</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
         </li>
         <li><span class="parameter">cacert</span>
@@ -210,6 +215,8 @@
         </li>
         <li><span class="parameter">md_alg</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">evp_md</span></span>
+
+
 
         </li>
         <li><span class="parameter">period</span>
@@ -307,6 +314,8 @@
         <li><span class="parameter">format</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
          (<em>default</em> 'pem')
         </li>
         <li><span class="parameter">noext</span>
@@ -320,6 +329,8 @@
     <ol>
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
     </ol>
 
@@ -347,6 +358,8 @@
         </li>
         <li><span class="parameter">md_alg</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">md_digest</span></span>
+
+
 
          (<em>default</em> 'sha1WithRSAEncryption')
         </li>
@@ -404,6 +417,8 @@
         <li><span class="parameter">other</span>
             <span class="types"><span class="type">x509_crl</span></span>
 
+
+
         </li>
     </ul>
 
@@ -435,18 +450,26 @@
         <li><span class="parameter">newer</span>
             <span class="types"><span class="type">x509_crl</span></span>
 
+
+
         </li>
         <li><span class="parameter">pkey</span>
             <span class="types"><span class="type">evp_pkey</span></span>
+
+
 
         </li>
         <li><span class="parameter">md_alg</span>
             <span class="types"><span class="type">evp_md</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
          (<em>default</em> 'sha1')
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">integer</span></span>
+
+
 
          (<em>default</em> 0)
         </li>
@@ -468,7 +491,7 @@
     <strong>x509_crl:check (pkey[, flags=0])</strong>
     </dt>
     <dd>
-    check x509_crl with evp_pkey
+    check x509<em>crl with evp</em>pkey
 
 
     <h3>Parameters:</h3>
@@ -476,9 +499,13 @@
         <li><span class="parameter">pkey</span>
             <span class="types"><span class="type">evp_pkey</span></span>
 
+
+
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">integer</span></span>
+
+
 
          (<em>default</em> 0)
         </li>
@@ -560,6 +587,8 @@
         <li><span class="parameter">index</span>
             <span class="types"><span class="type">number</span></span>
 
+
+
         </li>
     </ul>
 
@@ -586,6 +615,8 @@
     <ul>
         <li><span class="parameter">version</span>
             <span class="types"><span class="type">integer</span></span>
+
+
 
         </li>
     </ul>
@@ -615,6 +646,8 @@
 
            <span class="types"><span class="type">x509_name</span></span>
 
+
+
     </ol>
 
 
@@ -633,6 +666,8 @@
     <ul>
         <li><span class="parameter">issuer</span>
             <span class="types"><span class="type">x509_name</span> or <span class="type">x509</span></span>
+
+
 
         </li>
     </ul>
@@ -681,6 +716,8 @@
         <li><span class="parameter">lastUpdate</span>
             <span class="types"><span class="type">number</span></span>
 
+
+
         </li>
     </ul>
 
@@ -727,6 +764,8 @@
     <ul>
         <li><span class="parameter">nextUpdate</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
         </li>
     </ul>
@@ -857,13 +896,19 @@
         <li><span class="parameter">serial</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a>, <span class="type">number</span> or <span class="type">bn</span></span>
 
+
+
         </li>
         <li><span class="parameter">revokedtime</span>
             <span class="types"><span class="type">number</span></span>
 
+
+
         </li>
         <li><span class="parameter">reason</span>
             <span class="types"><span class="type">number</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
          (<em>default</em> 0)
         </li>

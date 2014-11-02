@@ -3,8 +3,8 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <head>
-    <title>Reference</title>
-    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    <title>lua-openssl Docmentation</title>
+    <link rel="stylesheet" href="../ldoc_pale.css" type="text/css" />
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 <div id="navigation">
 <br/>
-<h1>ldoc</h1>
+<h1>lua-openssl</h1>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -59,6 +59,10 @@
   <li><a href="../modules/x509.name.html">x509.name</a></li>
   <li><strong>csr</strong></li>
 </ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/readme.md.html">readme</a></li>
+</ul>
 
 </div>
 
@@ -66,8 +70,7 @@
 
 <h1>Module <code>csr</code></h1>
 <p>Provide csr module.</p>
-<p>
- create and manage x509 certificate sign request</p>
+<p> create and manage x509 certificate sign request</p>
     <h3>Usage:</h3>
     <ul>
         <pre class="example">
@@ -143,7 +146,7 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#x509_req:check">x509_req:check (pkey)</a></td>
-	<td class="summary">check x509_req with evp_pkey</td>
+	<td class="summary">check x509<em>req with evp</em>pkey</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#x509_req:verify">x509_req:verify ()</a></td>
@@ -170,8 +173,8 @@
     <strong>new ([subject[, extensions[, attributes[, pkey[, md_alg='sha1WithRSAEncryption']]]]])</strong>
     </dt>
     <dd>
-    create or generate a new x509_req object.
- Note if not give evp_pkey, will create a new x509_req object,or will generate a signed x509_req object.
+    create or generate a new x509<em>req object.
+ Note if not give evp</em>pkey, will create a new x509<em>req object,or will generate a signed x509</em>req object.
 
 
     <h3>Parameters:</h3>
@@ -263,6 +266,8 @@
         <li><span class="parameter">format</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
          (<em>default</em> 'pem')
         </li>
         <li><span class="parameter">noext</span>
@@ -276,6 +281,8 @@
     <ol>
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
     </ol>
 
@@ -344,6 +351,8 @@
 
            <span class="types"><span class="type">integer</span></span>
 
+
+
     </ol>
 
 
@@ -362,6 +371,8 @@
     <ul>
         <li><span class="parameter">version</span>
             <span class="types"><span class="type">integer</span></span>
+
+
 
         </li>
     </ul>
@@ -391,6 +402,8 @@
 
            <span class="types"><span class="type">x509_name</span></span>
 
+
+
     </ol>
 
 
@@ -409,6 +422,8 @@
     <ul>
         <li><span class="parameter">subject</span>
             <span class="types"><span class="type">x509_name</span></span>
+
+
 
         </li>
     </ul>
@@ -436,6 +451,8 @@
     <ul>
         <li><span class="parameter">location</span>
             <span class="types"><span class="type">integer</span></span>
+
+
 
         </li>
         <li><span class="parameter">nil</span>
@@ -467,6 +484,8 @@
     <ul>
         <li><span class="parameter">location</span>
             <span class="types"><span class="type">integer</span></span>
+
+
 
         </li>
     </ul>
@@ -523,6 +542,8 @@
 
            <span class="types"><span class="type">integer</span></span>
 
+
+
     </ol>
 
 
@@ -574,13 +595,15 @@
     <strong>x509_req:check (pkey)</strong>
     </dt>
     <dd>
-    check x509_req with evp_pkey
+    check x509<em>req with evp</em>pkey
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">pkey</span>
             <span class="types"><span class="type">evp_pkey</span></span>
+
+
 
         </li>
     </ul>

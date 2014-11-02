@@ -3,8 +3,8 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <head>
-    <title>Reference</title>
-    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    <title>lua-openssl Docmentation</title>
+    <link rel="stylesheet" href="../ldoc_pale.css" type="text/css" />
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 <div id="navigation">
 <br/>
-<h1>ldoc</h1>
+<h1>lua-openssl</h1>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -60,6 +60,10 @@
   <li><a href="../modules/x509.name.html">x509.name</a></li>
   <li><a href="../modules/csr.html">csr</a></li>
 </ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/readme.md.html">readme</a></li>
+</ul>
 
 </div>
 
@@ -67,7 +71,9 @@
 
 <h1>Module <code>pkey</code></h1>
 <p>Provide Public/Private key module.</p>
-<p></p>
+<p>
+
+</p>
     <h3>Usage:</h3>
     <ul>
         <pre class="example">pkey = require&apos;openssl&apos;.pkey</pre>
@@ -237,6 +243,8 @@
         <li><span class="parameter">priv_key</span>
             <span class="types"><span class="type">evp_pkey</span></span>
 
+
+
         </li>
     </ul>
 
@@ -380,7 +388,7 @@
     </dt>
     <dd>
     encrypt message with public key
- encrypt length of message must not longer than key size, if shorter will do padding,currently supports 6 padding modes.
+ encrypt length of message must not longer than key size, if shorter will do padding,currently supports 6 padding modes. <br/>
  They are: pkcs1, sslv23, no, oaep, x931, pss.
 
 
@@ -447,6 +455,8 @@
 
            <span class="types"><span class="type">nil</span></span>
 
+
+
     </ol>
 
 
@@ -476,6 +486,8 @@
         <li><span class="parameter">alg</span>
             <span class="types"><span class="type">cipher</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
          (<em>default</em> 'RC4')
         </li>
     </ul>
@@ -490,7 +502,9 @@
         ekey secret key encrypted by public key</li>
         <li>
            <span class="types"><span class="type">stringiv</span></span>
-        </li>
+
+
+</li>
     </ol>
 
 
@@ -518,6 +532,8 @@
         </li>
         <li><span class="parameter">alg</span>
             <span class="types"><span class="type">cipher</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
          (<em>default</em> 'RC4')
         </li>
@@ -565,6 +581,8 @@
         <li><span class="parameter">md_alg</span>
             <span class="types"><span class="type">evp_cipher</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
          (<em>default</em> 'RC4')
         </li>
     </ul>
@@ -596,8 +614,8 @@
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          to create private/public key, key alg only accept accept 'rsa','dsa','dh','ec' and must exist</br>
   when arg is rsa, table may with key n,e,d,p,q,dmp1,dmq1,iqmp,both are string value</br>
-  when arg is dsa, table may with key p,q,g,priv_key,pub_key,both are string value</br>
-  when arg is dh, table may with key p,g,priv_key,pub_key,both are string value</br>
+  when arg is dsa, table may with key p,q,g,priv<em>key,pub</em>key,both are string value</br>
+  when arg is dh, table may with key p,g,priv<em>key,pub</em>key,both are string value</br>
   when arg is ec, table may with D,X,Y,Z,both are string value</br>
         </li>
     </ul>
@@ -646,6 +664,8 @@
     <ol>
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
     </ol>
 
@@ -707,6 +727,8 @@
         <li><span class="parameter">remote_public_key</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
     </ul>
 
@@ -714,6 +736,8 @@
     <ol>
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
     </ol>
 
@@ -793,7 +817,7 @@
     </dt>
     <dd>
     encrypt message with public key
- encrypt length of message must not longer than key size, if shorter will do padding,currently supports 6 padding modes.
+ encrypt length of message must not longer than key size, if shorter will do padding,currently supports 6 padding modes. <br/>
  They are: pkcs1, sslv23, no, oaep, x931, pss.
 
 
@@ -852,6 +876,8 @@
 
            <span class="types"><span class="type">nil</span></span>
 
+
+
     </ol>
 
 
@@ -875,6 +901,8 @@
         </li>
         <li><span class="parameter">alg</span>
             <span class="types"><span class="type">cipher</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
          (<em>default</em> 'RC4')
         </li>
@@ -917,6 +945,8 @@
         </li>
         <li><span class="parameter">md_alg</span>
             <span class="types"><span class="type">evp_cipher</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
          (<em>default</em> 'RC4')
         </li>

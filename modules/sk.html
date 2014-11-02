@@ -3,8 +3,8 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <head>
-    <title>Reference</title>
-    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    <title>lua-openssl Docmentation</title>
+    <link rel="stylesheet" href="../ldoc_pale.css" type="text/css" />
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 <div id="navigation">
 <br/>
-<h1>ldoc</h1>
+<h1>lua-openssl</h1>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -59,6 +59,10 @@
   <li><a href="../modules/x509.name.html">x509.name</a></li>
   <li><a href="../modules/csr.html">csr</a></li>
 </ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/readme.md.html">readme</a></li>
+</ul>
 
 </div>
 
@@ -66,18 +70,20 @@
 
 <h1>Module <code>sk</code></h1>
 <p>Provide hmac function in lua.</p>
-<p></p>
+<p>
+
+</p>
 
 
 <h2><a href="#Functions">Functions</a></h2>
 <table class="function_list">
 	<tr>
 	<td class="name" nowrap><a href="#openssl.sk_x509_read">openssl.sk_x509_read (input)</a></td>
-	<td class="summary">read stack_of_x509 from string data or bio input</td>
+	<td class="summary">read stack<em>of</em>x509 from string data or bio input</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#openssl.sk_x509_new">openssl.sk_x509_new (certs)</a></td>
-	<td class="summary">contrust stack_of_x509 from table</td>
+	<td class="summary">contrust stack<em>of</em>x509 from table</td>
 	</tr>
 </table>
 <h2><a href="#Class_stack_of_object">Class stack_of_object </a></h2>
@@ -108,7 +114,7 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#stack_of_object:totable">stack_of_object:totable ()</a></td>
-	<td class="summary">convert stack_of_object to table
+	<td class="summary">convert stack<em>of</em>object to table
  @@treturn table contain object index start from 1</td>
 	</tr>
 </table>
@@ -124,13 +130,15 @@
     <strong>openssl.sk_x509_read (input)</strong>
     </dt>
     <dd>
-    read stack_of_x509 from string data or bio input
+    read stack<em>of</em>x509 from string data or bio input
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">input</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">bio</span></span>
+
+
 
         </li>
     </ul>
@@ -139,6 +147,8 @@
     <ol>
 
            <span class="types"><span class="type">stack_of_x509</span></span>
+
+
 
     </ol>
 
@@ -155,7 +165,7 @@
     <strong>openssl.sk_x509_new (certs)</strong>
     </dt>
     <dd>
-    contrust stack_of_x509 from table
+    contrust stack<em>of</em>x509 from table
 
 
     <h3>Parameters:</h3>
@@ -171,6 +181,8 @@
 
            <span class="types"><span class="type">stack_of_x509</span></span>
 
+
+
     </ol>
 
 
@@ -184,8 +196,8 @@
 </dl>
     <h2><a name="Class_stack_of_object"></a>Class stack_of_object </h2>
 
- stack_of_x509 is an important object in lua-openssl, it can be used as a certchain, trusted CA files or unstrust certs.
- object not support x509, x509_extension or x509_attribute
+ stack<em>of</em>x509 is an important object in lua-openssl, it can be used as a certchain, trusted CA files or unstrust certs.
+ object not support x509, x509<em>extension or x509</em>attribute
     <dl class="function">
     <dt>
     <a name = "stack_of_object:push"></a>
@@ -199,6 +211,8 @@
     <ul>
         <li><span class="parameter">obj</span>
             <span class="types"><span class="type">object</span></span>
+
+
 
         </li>
     </ul>
@@ -228,6 +242,8 @@
 
            <span class="types"><span class="type">object</span></span>
 
+
+
     </ol>
 
 
@@ -247,9 +263,13 @@
         <li><span class="parameter">location</span>
             <span class="types"><span class="type">integer</span></span>
 
+
+
         </li>
         <li><span class="parameter">object</span>
             <span class="types"><span class="type">object</span></span>
+
+
 
         </li>
     </ul>
@@ -278,6 +298,8 @@
         <li><span class="parameter">location</span>
             <span class="types"><span class="type">integer</span></span>
 
+
+
         </li>
     </ul>
 
@@ -305,9 +327,13 @@
         <li><span class="parameter">obj</span>
             <span class="types"><span class="type">object</span></span>
 
+
+
         </li>
         <li><span class="parameter">location</span>
             <span class="types"><span class="type">integer</span></span>
+
+
 
         </li>
     </ul>
@@ -336,6 +362,8 @@
         <li><span class="parameter">location</span>
             <span class="types"><span class="type">integer</span></span>
 
+
+
         </li>
     </ul>
 
@@ -355,7 +383,7 @@
     <strong>stack_of_object:totable ()</strong>
     </dt>
     <dd>
-    convert stack_of_object to table
+    convert stack<em>of</em>object to table
  @@treturn table contain object index start from 1
 
 

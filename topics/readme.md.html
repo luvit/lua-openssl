@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>lua-openssl Docmentation</title>
+    <link rel="stylesheet" href="../ldoc_pale.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>lua-openssl</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#lua_openssl_modules">lua-openssl modules </a></li>
+<li><a href="#documentation">documentation </a></li>
+<li><a href="#compat_with_others">compat with others </a></li>
+<li><a href="#lua_openssl_Objects">lua-openssl Objects </a></li>
+<li><a href="#openssl_bn">openssl.bn </a></li>
+<li><a href="#Version">Version </a></li>
+<li><a href="#Bugs">Bugs </a></li>
+</ul>
+
+
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><strong>readme</strong></li>
+</ul>
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../modules/asn1.html">asn1</a></li>
+  <li><a href="../modules/bio.html">bio</a></li>
+  <li><a href="../modules/cipher.html">cipher</a></li>
+  <li><a href="../modules/cms.html">cms</a></li>
+  <li><a href="../modules/digest.html">digest</a></li>
+  <li><a href="../modules/hmac.html">hmac</a></li>
+  <li><a href="../modules/openssl.html">openssl</a></li>
+  <li><a href="../modules/pkcs12.html">pkcs12</a></li>
+  <li><a href="../modules/pkcs7.html">pkcs7</a></li>
+  <li><a href="../modules/pkey.html">pkey</a></li>
+  <li><a href="../modules/sk.html">sk</a></li>
+  <li><a href="../modules/ssl.html">ssl</a></li>
+  <li><a href="../modules/ts.html">ts</a></li>
+  <li><a href="../modules/x509.html">x509</a></li>
+  <li><a href="../modules/x509.attr.html">x509.attr</a></li>
+  <li><a href="../modules/crl.html">crl</a></li>
+  <li><a href="../modules/x509.extension.html">x509.extension</a></li>
+  <li><a href="../modules/x509.name.html">x509.name</a></li>
+  <li><a href="../modules/csr.html">csr</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+    lua-openssl toolkit - A free, MIT-licensed OpenSSL binding for Lua.</p>
+
+<p><a href="https://travis-ci.org/zhaozg/lua-openssl"><img src="https://travis-ci.org/zhaozg/lua-openssl.svg" alt="Build Status"/></a>
+<a href="https://ci.appveyor.com/project/zhaozg/lua-openssl/branch/master"><img src="https://ci.appveyor.com/api/projects/status/f8xchhlj035yqq88/branch/master?svg=true" alt="Build status"/></a></p>
+
+<h1>Index</h1>
+
+<ol>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#documentation">Documentation</a></li>
+    <li><a href="#a---howto">Howto</a></li>
+    <li><a href="#b--example-usage">Examples</a> </li>
+</ol>
+
+<h1>Introduction</h1>
+
+<p>I needed a full OpenSSL binding for Lua, after googled, I couldn't find a version to fit my needs.
+I found the PHP openssl binding is a good implementation, and it inspired me.
+So I decided to write this OpenSSL toolkit for Lua.</p>
+
+<p>The goal is to fully support the listed items.Below you can find the development progress of lua-openssl. </p>
+
+<ul>
+    <li>Symmetrical encrypt/decrypt. (Finished)</li>
+    <li>Message digest. (Finished)</li>
+    <li>Asymmetrical encrypt/decrypt/sign/verify/seal/open. (Finished)</li>
+    <li>X509 certificate. (Finished)</li>
+    <li>PKCS7/CMS. (Developing)</li>
+    <li>SSL/TLS. (Finished)</li>
+</ul>
+
+<p>Most of the lua-openssl functions require a key or certificate as argument; to make things easy to use OpenSSL,
+This rule allow you to specify certificates or keys in the following ways:</p>
+
+<ol>
+    <li>As an openssl.x509 object returned from openssl.x509.read</li>
+    <li>As an openssl.evp_pkey object return from openssl.pkey.read or openssl.pkey.new</li>
+</ol>
+
+<p>Similarly, you can also specify a public key as a key object returned from x509:get_public().</p>
+
+<p><a name="lua_openssl_modules"></a></p>
+<h2>lua-openssl modules</h2>
+<p>digest,cipher, x509, cms and so on, be write as modules.</p>
+
+
+<pre>
+   <span class="keyword">local</span> digest = <span class="global">require</span><span class="string">'openssl'</span>.digest
+   <span class="keyword">local</span> cipher = <span class="global">require</span><span class="string">'openssl'</span>.cipher
+   <span class="keyword">local</span> crypto = <span class="global">require</span><span class="string">'crypto'</span>
+   <span class="keyword">local</span> ssl    = <span class="global">require</span><span class="string">'ssl'</span>
+</pre>
+
+
+<p>digest() equals with digest.digest(), same cipher() equals with cipher.cipher().</p>
+
+<p><a name="documentation"></a></p>
+<h2>documentation</h2>
+
+<p>Document please see <a href="http://zhaozg.github.io/lua-openssl/">here</a></p>
+
+<p><a name="compat_with_others"></a></p>
+<h2>compat with others</h2>
+
+<p><strong>crypto</strong> is a compat module with <a href="https://github.com/mkottman/luacrypto">LuaCrypto</a>,
+document should to <a href="http://mkottman.github.io/luacrypto/manual.html#reference">reference</a></p>
+
+<p><strong>ssl</strong> is a compat module with <a href="https://github.com/brunoos/luasec">luasec</a>,
+document should to <a href="https://github.com/brunoos/luasec/wiki/LuaSec-0.5">refrence</a>.
+NYI list: conn:settimeout,...</p>
+
+<p><a name="lua_openssl_Objects"></a></p>
+<h2>lua-openssl Objects</h2>
+
+<p>The following are some important lua-openssl object types:</p>
+
+<pre><code>    openssl.bio,
+    openssl.x509,
+    openssl.stack_of_x509,
+    openssl.x509_req,
+    openssl.evp_pkey,
+    openssl.evp_digest,
+    openssl.evp_cipher,
+    openssl.engine,
+    openssl.pkcs7,
+    openssl.cms,
+    openssl.evp_cipher_ctx,
+    openssl.evp_digest_ctx
+    ...
+</code></pre>
+
+
+<p>They are shortened as bio, x509, sk_x509, csr, pkey, digest, cipher,</p>
+
+<pre>
+engine, cipher_ctx, <span class="keyword">and</span> digest_ctx.
+</pre>
+
+<p><a name="openssl_bn"></a></p>
+<h2>openssl.bn</h2>
+<p>* <strong><em>openssl.bn</em></strong> come from <a href="http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/">http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/</a>,thanks.</p>
+
+<p>openssl.bn is a big-number library for Lua 5.1. It handles only integers and is
+suitable for number-theoretical and cryptographic applications. It is based
+on the bn subsystem of OpenSSL cryptographic library:</p>
+
+<pre>
+http://www.openssl.org/docs/crypto/bn.html
+</pre>
+
+<p>If you're running Unix, you probably already have OpenSSL installed.</p>
+
+<p>To try the library, just edit Makefile to reflect your installation of Lua and
+then run make. This will build the library and run a simple test. For detailed
+installation instructions, see</p>
+
+<pre>
+http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/install.html
+</pre>
+
+<p>There is no manual but the library is simple and intuitive; see the summary
+below.</p>
+
+<p>bn library:</p>
+<pre><code>  __add(x,y)        compare(x,y)        pow(x,y)
+  __div(x,y)        div(x,y)            powmod(x,y,m)
+  __eq(x,y)     divmod(x,y)         random(bits)
+  __lt(x,y)     gcd(x,y)            rmod(x,y)
+  __mod(x,y)        invmod(x)           sqr(x)
+  __mul(x,y)        isneg(x)            sqrmod(x)
+  __pow(x,y)        isodd(x)            sqrtmod(x)
+  __sub(x,y)        isone(x)            sub(x,y)
+  __tostring(x) isprime(x,[checks]) submod(x,y,m)
+  __unm(x)      iszero(x)           text(t)
+  abs(x)            mod(x,y)            tohex(x)
+  add(x,y)      mul(x,y)            tonumber(x)
+  addmod(x,y,m) mulmod(x,y,m)       tostring(x)
+  aprime(bits)  neg(x)              totext(x)
+  bits(x)       number(x)           version
+</code></pre>
+
+
+<p><a name="Version"></a></p>
+<h2>Version</h2>
+
+<p>This lua-openssl toolkit works with Lua 5.1 or 5.2, and OpenSSL (0.9.8 or above 1.0.0).
+It is recommended to use the most up-to-date OpenSSL version because of the recent security fixes.</p>
+
+<p>If you want to get the lua-openssl and OpenSSL versions from a Lua script, here is how:</p>
+
+
+<pre>
+openssl = <span class="global">require</span> <span class="string">"openssl"</span>
+lua_openssl_version, lua_version, openssl_version = openssl.version()
+</pre>
+
+
+<p><a name="Bugs"></a></p>
+<h2>Bugs</h2>
+
+<p>Lua-Openssl is heavily updated, if you find bug, please report to <a href="https://github.com/zhaozg/lua-openssl/issues/">here</a></p>
+
+<h1>A.   Howto</h1>
+
+<h3>Howto 1: Build on Linux/Unix System.</h3>
+
+
+<pre>
+make
+make install
+make clean
+</pre>
+
+<h3>Howto 2: Build on Windows with MSVC.</h3>
+
+<p>Before building, please change the setting in the config.win file.
+Works with Lua5.1 (should support Lua5.2 by updating the config.win file).</p>
+
+
+<pre>
+nmake -f makefile.win
+nmake -f makefile.win install
+nmake -f makefile.win clean
+</pre>
+
+<h3>Howto 3: Build on Windows with mingw.</h3>
+
+
+<pre>
+make
+make install
+make clean
+</pre>
+
+<h3>Howto 4: Install using luarocks.</h3>
+
+<pre>
+
+luarocks install openssl <span class="comment">--server=https://rocks.moonscript.org/dev
+</span>
+</pre>
+
+<h1>B.  Example usage</h1>
+
+<h3>Example 1: short encrypt/decrypt</h3>
+
+
+<pre>
+<span class="keyword">local</span> evp_cipher = openssl.cipher.get(<span class="string">'des'</span>)
+m = <span class="string">'abcdefghick'</span>
+key = m
+cdata = evp_cipher:encrypt(m,key)
+m1  = evp_cipher:decrypt(cdata,key)
+<span class="global">assert</span>(m==m1)
+</pre>
+
+
+<h3>Example 2: quick evp_digest</h3>
+
+
+<pre>
+md = openssl.digest.get(<span class="string">'md5'</span>)
+m = <span class="string">'abcd'</span>
+aa = md:digest(m)
+
+mdc=md:new()
+mdc:update(m)
+bb = mdc:final()
+<span class="global">assert</span>(openssl.hex(aa,<span class="keyword">true</span>)==bb)
+</pre>
+
+
+<h3>Example 3:  Iterate a openssl.stack<em>of</em>x509(sk_x509) object</h3>
+
+
+<pre>
+n = #sk
+<span class="keyword">for</span> i=<span class="number">1</span>, n <span class="keyword">do</span>
+    x = sk:get(i)
+<span class="keyword">end</span>
+</pre>
+
+
+<h3>Example 4: read and parse certificate</h3>
+
+
+<pre>
+<span class="keyword">local</span> openssl = <span class="global">require</span>(<span class="string">'openssl'</span>)
+
+<span class="keyword">function</span> dump(t,i)
+    <span class="keyword">for</span> k,v <span class="keyword">in</span> <span class="global">pairs</span>(t) <span class="keyword">do</span>
+        <span class="keyword">if</span>(<span class="global">type</span>(v)==<span class="string">'table'</span>) <span class="keyword">then</span>
+            <span class="global">print</span>( <span class="global">string</span>.rep(<span class="string">'\t'</span>,i),k..<span class="string">'={'</span>)
+            dump(v,i+<span class="number">1</span>)
+            <span class="global">print</span>( <span class="global">string</span>.rep(<span class="string">'\t'</span>,i),k..<span class="string">'=}'</span>)
+        <span class="keyword">else</span>
+            <span class="global">print</span>( <span class="global">string</span>.rep(<span class="string">'\t'</span>,i),k..<span class="string">'='</span>..<span class="global">tostring</span>(v))
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+<span class="keyword">function</span> test_x509()
+    <span class="keyword">local</span> x = openssl.x509.read(certasstring)
+    <span class="global">print</span>(x)
+    t = x:parse()
+    dump(t,<span class="number">0</span>)
+    <span class="global">print</span>(t)
+<span class="keyword">end</span>
+
+test_x509()
+</pre>
+
+
+<h3>Example 5: bio network handle(TCP)</h3>
+
+<ul>
+    <li>server</li>
+</ul>
+
+
+<pre>
+<span class="keyword">local</span> openssl = <span class="global">require</span><span class="string">'openssl'</span>
+<span class="keyword">local</span> bio = openssl.bio
+
+host = host <span class="keyword">or</span> <span class="string">"127.0.0.1"</span>; <span class="comment">--only ip
+</span>port = port <span class="keyword">or</span> <span class="string">"8383"</span>;
+
+<span class="keyword">local</span> srv = <span class="global">assert</span>(bio.accept(host..<span class="string">':'</span>..port))
+<span class="global">print</span>(<span class="string">'listen at:'</span>..port)
+<span class="keyword">local</span> cli = <span class="global">assert</span>(srv:accept())
+<span class="keyword">while</span> <span class="number">1</span> <span class="keyword">do</span>
+    cli = <span class="global">assert</span>(srv:accept())
+    <span class="global">print</span>(<span class="string">'CLI:'</span>,cli)
+    <span class="keyword">while</span> cli <span class="keyword">do</span>
+        <span class="keyword">local</span> s = <span class="global">assert</span>(cli:read())
+        <span class="global">print</span>(s)
+        <span class="global">assert</span>(cli:write(s))
+    <span class="keyword">end</span>
+    <span class="global">print</span>(openssl.error(<span class="keyword">true</span>))
+<span class="keyword">end</span>
+</pre>
+
+
+<ul>
+    <li>client
+
+<pre>
+<span class="keyword">local</span> openssl = <span class="global">require</span><span class="string">'openssl'</span>
+<span class="keyword">local</span> bio = openssl.bio
+<span class="global">io</span>.read()
+
+host = host <span class="keyword">or</span> <span class="string">"127.0.0.1"</span>; <span class="comment">--only ip
+</span>port = port <span class="keyword">or</span> <span class="string">"8383"</span>;
+
+<span class="keyword">local</span> cli = <span class="global">assert</span>(bio.connect(host..<span class="string">':'</span>..port,<span class="keyword">true</span>))
+
+    <span class="keyword">while</span> cli <span class="keyword">do</span>
+        s = <span class="global">io</span>.read()
+        <span class="keyword">if</span>(#s&gt;<span class="number">0</span>) <span class="keyword">then</span>
+            <span class="global">print</span>(cli:write(s))
+            ss = cli:read()
+            <span class="global">assert</span>(#s==#ss)
+        <span class="keyword">end</span>
+    <span class="keyword">end</span>
+    <span class="global">print</span>(openssl.error(<span class="keyword">true</span>))
+</pre>
+</li>
+</ul>
+
+<p>For more examples, please see test lua script file.</p>
+
+
+<hr/>
+<p><strong><em>lua-openssl License</em></strong></p>
+
+<p>Copyright (c) 2011 - 2014 zhaozg, zhaozg(at)gmail.com</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+
+<hr/>
+
+<p>This product includes PHP software, freely available from <a href="http://www.php.net/software/">http://www.php.net/software/</a>
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.2</a></i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

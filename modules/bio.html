@@ -3,8 +3,8 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <head>
-    <title>Reference</title>
-    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    <title>lua-openssl Docmentation</title>
+    <link rel="stylesheet" href="../ldoc_pale.css" type="text/css" />
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 <div id="navigation">
 <br/>
-<h1>ldoc</h1>
+<h1>lua-openssl</h1>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -59,6 +59,10 @@
   <li><a href="../modules/x509.name.html">x509.name</a></li>
   <li><a href="../modules/csr.html">csr</a></li>
 </ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/readme.md.html">readme</a></li>
+</ul>
 
 </div>
 
@@ -66,8 +70,7 @@
 
 <h1>Module <code>bio</code></h1>
 <p>Provide bio module.</p>
-<p>
- bio object mapping to BIO in openssl
+<p> bio object mapping to BIO in openssl
  openssl.bio is a help object, it is useful, but rarely use.</p>
     <h3>Usage:</h3>
     <ul>
@@ -195,6 +198,8 @@
         <li><span class="parameter">data</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
          (<em>default</em> nil)
         </li>
     </ul>
@@ -203,6 +208,8 @@
     <ol>
 
            <span class="types"><a class="type" href="../modules/bio.html#bio">bio</a></span>
+
+
 
     </ol>
 
@@ -251,6 +258,8 @@
         <li><span class="parameter">fd</span>
             <span class="types"><span class="type">number</span></span>
 
+
+
         </li>
         <li><span class="parameter">support</span>
             <span class="types"><span class="type">flag</span></span>
@@ -263,6 +272,8 @@
     <ol>
 
            <span class="types"><a class="type" href="../modules/bio.html#bio">bio</a></span>
+
+
 
     </ol>
 
@@ -283,6 +294,8 @@
         <li><span class="parameter">fd</span>
             <span class="types"><span class="type">number</span></span>
 
+
+
         </li>
         <li><span class="parameter">support</span>
             <span class="types"><span class="type">flag</span></span>
@@ -295,6 +308,8 @@
     <ol>
 
            <span class="types"><a class="type" href="../modules/bio.html#bio">bio</a></span>
+
+
 
     </ol>
 
@@ -315,6 +330,8 @@
         <li><span class="parameter">fd</span>
             <span class="types"><span class="type">number</span></span>
 
+
+
         </li>
         <li><span class="parameter">support</span>
             <span class="types"><span class="type">flag</span></span>
@@ -327,6 +344,8 @@
     <ol>
 
            <span class="types"><a class="type" href="../modules/bio.html#bio">bio</a></span>
+
+
 
     </ol>
 
@@ -347,9 +366,13 @@
         <li><span class="parameter">file</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
         <li><span class="parameter">mode</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
          (<em>default</em> 'r')
         </li>
@@ -359,6 +382,8 @@
     <ol>
 
            <span class="types"><a class="type" href="../modules/bio.html#bio">bio</a></span>
+
+
 
     </ol>
 
@@ -392,6 +417,8 @@
 
            <span class="types"><a class="type" href="../modules/bio.html#bio">bio</a></span>
 
+
+
     </ol>
 
 
@@ -418,6 +445,8 @@
     <ol>
 
            <span class="types"><a class="type" href="../modules/bio.html#bio">bio</a></span>
+
+
 
     </ol>
 
@@ -446,6 +475,8 @@
 
            <span class="types"><a class="type" href="../modules/bio.html#bio">bio</a></span>
 
+
+
     </ol>
 
 
@@ -469,6 +500,8 @@
         <li><span class="parameter">md_alg</span>
             <span class="types"><span class="type">evp_md</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
     </ul>
 
@@ -476,6 +509,8 @@
     <ol>
 
            <span class="types"><a class="type" href="../modules/bio.html#bio">bio</a></span>
+
+
 
     </ol>
 
@@ -500,6 +535,8 @@
         <li><span class="parameter">s</span>
             <span class="types"><span class="type">ssl</span></span>
 
+
+
         </li>
         <li><span class="parameter">support</span>
             <span class="types"><span class="type">flag</span></span>
@@ -512,6 +549,8 @@
     <ol>
 
            <span class="types"><a class="type" href="../modules/bio.html#bio">bio</a></span>
+
+
 
     </ol>
 
@@ -536,13 +575,19 @@
         <li><span class="parameter">key</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
         <li><span class="parameter">iv</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
         <li><span class="parameter">encrypt</span>
             <span class="types"><span class="type">boolean</span></span>
+
+
 
          (<em>default</em> true)
         </li>
@@ -552,6 +597,8 @@
     <ol>
 
            <span class="types"><a class="type" href="../modules/bio.html#bio">bio</a></span>
+
+
 
     </ol>
 
@@ -610,6 +657,8 @@
         <li><span class="parameter">len</span>
             <span class="types"><span class="type">number</span></span>
 
+
+
         </li>
     </ul>
 
@@ -665,6 +714,8 @@
         <li><span class="parameter">data</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
     </ul>
 
@@ -691,6 +742,8 @@
     <ul>
         <li><span class="parameter">data</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
         </li>
     </ul>
@@ -720,6 +773,8 @@
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
     </ol>
 
 
@@ -739,6 +794,8 @@
         <li><span class="parameter">append</span>
             <span class="types"><a class="type" href="../modules/bio.html#bio">bio</a></span>
 
+
+
         </li>
     </ul>
 
@@ -746,6 +803,8 @@
     <ol>
 
            <span class="types"><a class="type" href="../modules/bio.html#bio">bio</a></span>
+
+
 
     </ol>
 
@@ -765,6 +824,8 @@
     <ul>
         <li><span class="parameter">toremove</span>
             <span class="types"><a class="type" href="../modules/bio.html#bio">bio</a></span>
+
+
 
         </li>
     </ul>
@@ -815,6 +876,8 @@
     <ol>
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
     </ol>
 

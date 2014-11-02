@@ -3,8 +3,8 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <head>
-    <title>Reference</title>
-    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    <title>lua-openssl Docmentation</title>
+    <link rel="stylesheet" href="../ldoc_pale.css" type="text/css" />
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 <div id="navigation">
 <br/>
-<h1>ldoc</h1>
+<h1>lua-openssl</h1>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -60,6 +60,10 @@
   <li><a href="../modules/x509.name.html">x509.name</a></li>
   <li><a href="../modules/csr.html">csr</a></li>
 </ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/readme.md.html">readme</a></li>
+</ul>
 
 </div>
 
@@ -67,9 +71,7 @@
 
 <h1>Module <code>x509.extension</code></h1>
 <p>Provide x509_extension as lua object.</p>
-<p>
- Sometime when you make CSR,TS or X509, you maybe need to use this.
-</p>
+<p> Sometime when you make CSR,TS or X509, you maybe need to use this.</p>
     <h3>Usage:</h3>
     <ul>
         <pre class="example">
@@ -90,7 +92,7 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#new_sk_extension">new_sk_extension (node_array)</a></td>
-	<td class="summary">Create stack_of_x509_extension object, which mapping to STACK_OF(X509_EXTENSION)</td>
+	<td class="summary">Create stack<em>of</em>x509<em>extension object, which mapping to STACK</em>OF(X509_EXTENSION)</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#support">support ()</a></td>
@@ -137,11 +139,11 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#x509_extension:object">x509_extension:object ()</a></td>
-	<td class="summary">get asn1_object of x509_extension.</td>
+	<td class="summary">get asn1<em>object of x509</em>extension.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#x509_extension:object">x509_extension:object (obj)</a></td>
-	<td class="summary">set asn1_object for x509_extension.</td>
+	<td class="summary">set asn1<em>object for x509</em>extension.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#x509_extension:data">x509_extension:data ()</a></td>
@@ -226,7 +228,7 @@
     <strong>new_sk_extension (node_array)</strong>
     </dt>
     <dd>
-    Create stack_of_x509_extension object, which mapping to STACK_OF(X509_EXTENSION)
+    Create stack<em>of</em>x509<em>extension object, which mapping to STACK</em>OF(X509_EXTENSION)
 
 
     <h3>Parameters:</h3>
@@ -241,7 +243,7 @@
     <ol>
 
            <span class="types"><span class="type">sk_x509_extension</span></span>
-        mapping to STACK_OF(X509_EXTENSION) in openssl
+        mapping to STACK<em>OF(X509</em>EXTENSION) in openssl
     </ol>
 
 
@@ -288,6 +290,8 @@
     <ul>
         <li><span class="parameter">extension</span>
             <span class="types"><span class="type">x509_extension</span></span>
+
+
 
         </li>
         <li><span class="parameter">true</span>
@@ -513,7 +517,7 @@
     <strong>x509_extension:object ()</strong>
     </dt>
     <dd>
-    get asn1_object of x509_extension.
+    get asn1<em>object of x509</em>extension.
 
 
 
@@ -533,13 +537,15 @@
     <strong>x509_extension:object (obj)</strong>
     </dt>
     <dd>
-    set asn1_object for x509_extension.
+    set asn1<em>object for x509</em>extension.
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">obj</span>
             <span class="types"><span class="type">asn1_object</span></span>
+
+
 
         </li>
     </ul>
@@ -577,6 +583,8 @@
     <ol>
 
            <span class="types"><span class="type">asn1_string</span></span>
+
+
 
     </ol>
 
@@ -633,6 +641,8 @@
     <ol>
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
     </ol>
 

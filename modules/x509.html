@@ -3,8 +3,8 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <head>
-    <title>Reference</title>
-    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    <title>lua-openssl Docmentation</title>
+    <link rel="stylesheet" href="../ldoc_pale.css" type="text/css" />
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 <div id="navigation">
 <br/>
-<h1>ldoc</h1>
+<h1>lua-openssl</h1>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -59,6 +59,10 @@
   <li><a href="../modules/x509.name.html">x509.name</a></li>
   <li><a href="../modules/csr.html">csr</a></li>
 </ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/readme.md.html">readme</a></li>
+</ul>
 
 </div>
 
@@ -66,8 +70,7 @@
 
 <h1>Module <code>x509</code></h1>
 <p>Provide x509 module.</p>
-<p>
- create and manage x509 certificate</p>
+<p> create and manage x509 certificate</p>
     <h3>Usage:</h3>
     <ul>
         <pre class="example">
@@ -120,7 +123,7 @@
 	<tr>
 	<td class="name" nowrap><a href="#x509:check">x509:check (cacerts, untrusted[, purpose])</a></td>
 	<td class="summary">check x509 with ca certchian and option purpose
- purpose can be one of: ssl_client, ssl_server, ns_ssl_server, smime_sign, smime_encrypt, crl_sign, any, ocsp_helper, timestamp_sign</td>
+ purpose can be one of: ssl<em>client, ssl</em>server, ns<em>ssl</em>server, smime<em>sign, smime</em>encrypt, crl<em>sign, any, ocsp</em>helper, timestamp_sign</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#x509:digest">x509:digest ([md_alg='sha1'])</a></td>
@@ -295,6 +298,8 @@
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
 
+
+
     </ol>
 
 
@@ -321,6 +326,8 @@
     <ol>
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
     </ol>
 
@@ -349,8 +356,11 @@
     <ol>
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-        if type is 'standard' or 'netscape', contains node with {lname=...,sname=...,bitname=...},
-                if type is 'extend', contains node with {lname=...,sname=...,nid=...}
+
+<p>if type is 'standard' or 'netscape', contains node with {lname=...,sname=...,bitname=...},</p>
+<pre><code>            if type is 'extend', contains node with {lname=...,sname=...,nid=...}
+</code></pre>
+
     </ol>
 
 
@@ -387,6 +397,8 @@
     <ol>
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
     </ol>
 
@@ -443,6 +455,8 @@
         <li><span class="parameter">md_alg</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">md_digest</span></span>
 
+
+
          (<em>default</em> 'sha1WithRSAEncryption')
         </li>
     </ul>
@@ -491,13 +505,15 @@
     </dt>
     <dd>
     check x509 with ca certchian and option purpose
- purpose can be one of: ssl_client, ssl_server, ns_ssl_server, smime_sign, smime_encrypt, crl_sign, any, ocsp_helper, timestamp_sign
+ purpose can be one of: ssl<em>client, ssl</em>server, ns<em>ssl</em>server, smime<em>sign, smime</em>encrypt, crl<em>sign, any, ocsp</em>helper, timestamp_sign
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cacerts</span>
             <span class="types"><span class="type">stack_of_x509</span></span>
+
+
 
         </li>
         <li><span class="parameter">untrusted</span>
@@ -608,7 +624,7 @@
     <ul>
         <li><span class="parameter">asobject</span>
             <span class="types"><span class="type">boolean</span></span>
-        , true for return as stack_of_x509_extension or as table
+        , true for return as stack<em>of</em>x509_extension or as table
          (<em>default</em> false)
         </li>
     </ul>
@@ -642,6 +658,8 @@
     <ul>
         <li><span class="parameter">extensions</span>
             <span class="types"><span class="type">stack_of_x509_extension</span></span>
+
+
 
         </li>
     </ul>
@@ -701,6 +719,8 @@
         <li><span class="parameter">name</span>
             <span class="types"><a class="type" href="../modules/x509.html#x509">x509_name</a></span>
 
+
+
         </li>
     </ul>
 
@@ -759,6 +779,8 @@
         <li><span class="parameter">subject</span>
             <span class="types"><a class="type" href="../modules/x509.html#x509">x509_name</a></span>
 
+
+
         </li>
     </ul>
 
@@ -785,6 +807,8 @@
     <ul>
         <li><span class="parameter">asobject</span>
             <span class="types"><span class="type">boolean</span></span>
+
+
 
          (<em>default</em> true)
         </li>
@@ -819,6 +843,8 @@
     <ul>
         <li><span class="parameter">serail</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a>, <span class="type">number</span> or <span class="type">bn</span></span>
+
+
 
         </li>
     </ul>
@@ -867,6 +893,8 @@
         <li><span class="parameter">version</span>
             <span class="types"><span class="type">number</span></span>
 
+
+
         </li>
     </ul>
 
@@ -914,6 +942,8 @@
         <li><span class="parameter">notbefore</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">number</span></span>
 
+
+
         </li>
     </ul>
 
@@ -954,6 +984,8 @@
     <ul>
         <li><span class="parameter">notafter</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">number</span></span>
+
+
 
         </li>
     </ul>
@@ -1009,9 +1041,13 @@
         <li><span class="parameter">notbefore</span>
             <span class="types"><span class="type">number</span></span>
 
+
+
         </li>
         <li><span class="parameter">notafter</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
         </li>
     </ul>

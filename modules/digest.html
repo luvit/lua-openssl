@@ -3,8 +3,8 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <head>
-    <title>Reference</title>
-    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    <title>lua-openssl Docmentation</title>
+    <link rel="stylesheet" href="../ldoc_pale.css" type="text/css" />
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 <div id="navigation">
 <br/>
-<h1>ldoc</h1>
+<h1>lua-openssl</h1>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -60,6 +60,10 @@
   <li><a href="../modules/x509.name.html">x509.name</a></li>
   <li><a href="../modules/csr.html">csr</a></li>
 </ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/readme.md.html">readme</a></li>
+</ul>
 
 </div>
 
@@ -67,7 +71,9 @@
 
 <h1>Module <code>digest</code></h1>
 <p>Provide digest function in lua.</p>
-<p></p>
+<p>
+
+</p>
     <h3>Usage:</h3>
     <ul>
         <pre class="example">
@@ -88,7 +94,7 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#new">new (alg)</a></td>
-	<td class="summary">get evp_digest_ctx object</td>
+	<td class="summary">get evp<em>digest</em>ctx object</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#digest">digest (alg, msg[, raw])</a></td>
@@ -99,7 +105,7 @@
 <table class="function_list">
 	<tr>
 	<td class="name" nowrap><a href="#evp_digest:new">evp_digest:new ([nothing])</a></td>
-	<td class="summary">create new evp_digest_ctx</td>
+	<td class="summary">create new evp<em>digest</em>ctx</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#evp_digest:info">evp_digest:info ()</a></td>
@@ -114,7 +120,7 @@
 <table class="function_list">
 	<tr>
 	<td class="name" nowrap><a href="#evp_digest_ctx:info">evp_digest_ctx:info ()</a></td>
-	<td class="summary">get infomation of evp_digest_ctx object</td>
+	<td class="summary">get infomation of evp<em>digest</em>ctx object</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#evp_digest_ctx:update">evp_digest_ctx:update (msg)</a></td>
@@ -126,7 +132,7 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#evp_digest_ctx:reset">evp_digest_ctx:reset ()</a></td>
-	<td class="summary">reset evp_diget_ctx to reuse</td>
+	<td class="summary">reset evp<em>diget</em>ctx to reuse</td>
 	</tr>
 </table>
 
@@ -199,7 +205,7 @@
     <strong>new (alg)</strong>
     </dt>
     <dd>
-    get evp_digest_ctx object
+    get evp<em>digest</em>ctx object
 
 
     <h3>Parameters:</h3>
@@ -214,7 +220,7 @@
     <ol>
 
            <span class="types"><span class="type">evp_digest_ctx</span></span>
-        digest object mapping EVP_MD_CTX in openssl
+        digest object mapping EVP<em>MD</em>CTX in openssl
     </ol>
 
 
@@ -269,7 +275,7 @@
     <strong>evp_digest:new ([nothing])</strong>
     </dt>
     <dd>
-    create new evp_digest_ctx
+    create new evp<em>digest</em>ctx
 
 
     <h3>Parameters:</h3>
@@ -308,7 +314,7 @@
     <ol>
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-        info keys include nid,name size,block_size,pkey_type,flags
+        info keys include nid,name size,block<em>size,pkey</em>type,flags
     </ol>
 
 
@@ -331,6 +337,8 @@
         </li>
         <li><span class="parameter">eng</span>
             <span class="types"><span class="type">engine,</span></span>
+
+
 
         </li>
     </ul>
@@ -355,7 +363,7 @@
     <strong>evp_digest_ctx:info ()</strong>
     </dt>
     <dd>
-    get infomation of evp_digest_ctx object
+    get infomation of evp<em>digest</em>ctx object
 
 
 
@@ -433,7 +441,7 @@
     <strong>evp_digest_ctx:reset ()</strong>
     </dt>
     <dd>
-    reset evp_diget_ctx to reuse
+    reset evp<em>diget</em>ctx to reuse
 
 
 

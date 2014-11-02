@@ -3,8 +3,8 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <head>
-    <title>Reference</title>
-    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    <title>lua-openssl Docmentation</title>
+    <link rel="stylesheet" href="../ldoc_pale.css" type="text/css" />
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 <div id="navigation">
 <br/>
-<h1>ldoc</h1>
+<h1>lua-openssl</h1>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -62,6 +62,10 @@
   <li><a href="../modules/x509.name.html">x509.name</a></li>
   <li><a href="../modules/csr.html">csr</a></li>
 </ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/readme.md.html">readme</a></li>
+</ul>
 
 </div>
 
@@ -69,8 +73,7 @@
 
 <h1>Module <code>ts</code></h1>
 <p>Provide timestamp module.</p>
-<p>
- create and manage x509 certificate sign request</p>
+<p> create and manage x509 certificate sign request</p>
     <h3>Usage:</h3>
     <ul>
         <pre class="example">
@@ -95,11 +98,11 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#resp_ctx_new">resp_ctx_new ([signer[, pkey[, identity]]])</a></td>
-	<td class="summary">create ts_resp_ctx object</td>
+	<td class="summary">create ts<em>resp</em>ctx object</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#verify_ctx_new">verify_ctx_new ([reqdata=nil])</a></td>
-	<td class="summary">create ts_verify_ctx object</td>
+	<td class="summary">create ts<em>verify</em>ctx object</td>
 	</tr>
 </table>
 <h2><a href="#Class_ts_req">Class ts_req </a></h2>
@@ -114,7 +117,7 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#ts_req:to_verify_ctx">ts_req:to_verify_ctx ()</a></td>
-	<td class="summary">create ts_verify_ctx from ts_req object</td>
+	<td class="summary">create ts<em>verify</em>ctx from ts_req object</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#ts_req:dup">ts_req:dup ()</a></td>
@@ -184,15 +187,15 @@
 <table class="function_list">
 	<tr>
 	<td class="name" nowrap><a href="#ts_verify_ctx:verify">ts_verify_ctx:verify (data)</a></td>
-	<td class="summary">verify ts_resp object, pkcs7 token or ts_resp data</td>
+	<td class="summary">verify ts<em>resp object, pkcs7 token or ts</em>resp data</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#ts_verify_ctx:store">ts_verify_ctx:store ()</a></td>
-	<td class="summary">get stack_of_x509 cacerts</td>
+	<td class="summary">get stack<em>of</em>x509 cacerts</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#ts_verify_ctx:store">ts_verify_ctx:store (cacerts)</a></td>
-	<td class="summary">set stack_of_x509 cacerts</td>
+	<td class="summary">set stack<em>of</em>x509 cacerts</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#ts_verify_ctx:flags">ts_verify_ctx:flags ()</a></td>
@@ -271,11 +274,11 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#ts_resp_ctx:clock_precision_digits">ts_resp_ctx:clock_precision_digits ()</a></td>
-	<td class="summary">get clock_precision_digits</td>
+	<td class="summary">get clock<em>precision</em>digits</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#ts_resp_ctx:clock_precision_digits">ts_resp_ctx:clock_precision_digits (clock_precision_digits)</a></td>
-	<td class="summary">set clock_precision_digits</td>
+	<td class="summary">set clock<em>precision</em>digits</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#ts_resp_ctx:set_status_info">ts_resp_ctx:set_status_info (status, text)</a></td>
@@ -323,7 +326,7 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#ts_resp_ctx:sign">ts_resp_ctx:sign (data)</a></td>
-	<td class="summary">sign ts_req and get ts_resp, alias of create_response</td>
+	<td class="summary">sign ts<em>req and get ts</em>resp, alias of create_response</td>
 	</tr>
 </table>
 
@@ -345,6 +348,8 @@
     <ul>
         <li><span class="parameter">version</span>
             <span class="types"><span class="type">integer</span></span>
+
+
 
          (<em>default</em> 1)
         </li>
@@ -378,6 +383,8 @@
         <li><span class="parameter">input</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">bio</span></span>
 
+
+
         </li>
     </ul>
 
@@ -409,6 +416,8 @@
         <li><span class="parameter">input</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">bio</span></span>
 
+
+
         </li>
     </ul>
 
@@ -428,7 +437,7 @@
     <strong>resp_ctx_new ([signer[, pkey[, identity]]])</strong>
     </dt>
     <dd>
-    create ts_resp_ctx object
+    create ts<em>resp</em>ctx object
 
 
     <h3>Parameters:</h3>
@@ -463,13 +472,15 @@
     <strong>verify_ctx_new ([reqdata=nil])</strong>
     </dt>
     <dd>
-    create ts_verify_ctx object
+    create ts<em>verify</em>ctx object
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">reqdata</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">ts_req</span></span>
+
+
 
          (<em>default</em> nil)
         </li>
@@ -504,6 +515,8 @@
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
     </ol>
 
 
@@ -524,6 +537,8 @@
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
 
+
+
     </ol>
 
 
@@ -535,7 +550,7 @@
     <strong>ts_req:to_verify_ctx ()</strong>
     </dt>
     <dd>
-    create ts_verify_ctx from ts_req object
+    create ts<em>verify</em>ctx from ts_req object
 
 
 
@@ -564,6 +579,8 @@
 
            <span class="types"><span class="type">ts_req</span></span>
 
+
+
     </ol>
 
 
@@ -584,6 +601,8 @@
 
            <span class="types"><span class="type">integer</span></span>
 
+
+
     </ol>
 
 
@@ -602,6 +621,8 @@
     <ul>
         <li><span class="parameter">version</span>
             <span class="types"><span class="type">integer</span></span>
+
+
 
         </li>
     </ul>
@@ -650,6 +671,8 @@
         <li><span class="parameter">cert_req</span>
             <span class="types"><span class="type">boolean</span></span>
 
+
+
         </li>
     </ul>
 
@@ -697,6 +720,8 @@
         <li><span class="parameter">nonce</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">bn</span></span>
 
+
+
         </li>
     </ul>
 
@@ -724,6 +749,8 @@
     <ol>
 
            <span class="types"><span class="type">asn1_object</span></span>
+
+
 
     </ol>
 
@@ -798,6 +825,8 @@
         <li><span class="parameter">md_alg</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">evp_md</span></span>
 
+
+
          (<em>default</em> 'sha')
         </li>
     </ul>
@@ -830,6 +859,8 @@
     <ol>
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
     </ol>
 
@@ -871,6 +902,8 @@
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
 
+
+
     </ol>
 
 
@@ -891,6 +924,8 @@
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
 
+
+
     </ol>
 
 
@@ -906,13 +941,15 @@
     <strong>ts_verify_ctx:verify (data)</strong>
     </dt>
     <dd>
-    verify ts_resp object, pkcs7 token or ts_resp data
+    verify ts<em>resp object, pkcs7 token or ts</em>resp data
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">data</span>
             <span class="types"><span class="type">ts_resp</span>, <span class="type">pkcs7</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
         </li>
     </ul>
@@ -933,7 +970,7 @@
     <strong>ts_verify_ctx:store ()</strong>
     </dt>
     <dd>
-    get stack_of_x509 cacerts
+    get stack<em>of</em>x509 cacerts
 
 
 
@@ -941,6 +978,8 @@
     <ol>
 
            <span class="types"><span class="type">stack_of_x509</span></span>
+
+
 
     </ol>
 
@@ -953,13 +992,15 @@
     <strong>ts_verify_ctx:store (cacerts)</strong>
     </dt>
     <dd>
-    set stack_of_x509 cacerts
+    set stack<em>of</em>x509 cacerts
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cacerts</span>
             <span class="types"><span class="type">stack_of_x509</span></span>
+
+
 
         </li>
     </ul>
@@ -1008,6 +1049,8 @@
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">integer</span></span>
 
+
+
         </li>
     </ul>
 
@@ -1054,6 +1097,8 @@
     <ul>
         <li><span class="parameter">untrust</span>
             <span class="types"><span class="type">stack_of_x509</span></span>
+
+
 
         </li>
     </ul>
@@ -1148,6 +1193,8 @@
     <ul>
         <li><span class="parameter">imprint</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
         </li>
     </ul>
@@ -1254,6 +1301,8 @@
         <li><span class="parameter">certs</span>
             <span class="types"><span class="type">stack_of_x509</span></span>
 
+
+
         </li>
     </ul>
 
@@ -1301,6 +1350,8 @@
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">integer</span></span>
 
+
+
         </li>
     </ul>
 
@@ -1329,6 +1380,8 @@
 
            <span class="types"><span class="type">stack_of_asn1_object</span></span>
 
+
+
     </ol>
 
 
@@ -1347,6 +1400,8 @@
     <ul>
         <li><span class="parameter">policies</span>
             <span class="types"><span class="type">asn1_object</span>, <span class="type">integer</span> or <span class="type">stack_of_asn1_object</span></span>
+
+
 
         </li>
     </ul>
@@ -1401,13 +1456,19 @@
         <li><span class="parameter">seconds</span>
             <span class="types"><span class="type">integer</span></span>
 
+
+
         </li>
         <li><span class="parameter">millis</span>
             <span class="types"><span class="type">integer</span></span>
 
+
+
         </li>
         <li><span class="parameter">micros</span>
             <span class="types"><span class="type">integer</span></span>
+
+
 
         </li>
     </ul>
@@ -1428,7 +1489,7 @@
     <strong>ts_resp_ctx:clock_precision_digits ()</strong>
     </dt>
     <dd>
-    get clock_precision_digits
+    get clock<em>precision</em>digits
 
 
 
@@ -1436,7 +1497,7 @@
     <ol>
 
            <span class="types"><span class="type">integer</span></span>
-        clock_precision_digits
+        clock<em>precision</em>digits
     </ol>
 
 
@@ -1448,13 +1509,15 @@
     <strong>ts_resp_ctx:clock_precision_digits (clock_precision_digits)</strong>
     </dt>
     <dd>
-    set clock_precision_digits
+    set clock<em>precision</em>digits
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">clock_precision_digits</span>
             <span class="types"><span class="type">integer</span></span>
+
+
 
         </li>
     </ul>
@@ -1483,9 +1546,13 @@
         <li><span class="parameter">status</span>
             <span class="types"><span class="type">integer</span></span>
 
+
+
         </li>
         <li><span class="parameter">text</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
         </li>
     </ul>
@@ -1514,9 +1581,13 @@
         <li><span class="parameter">status</span>
             <span class="types"><span class="type">integer</span></span>
 
+
+
         </li>
         <li><span class="parameter">text</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
         </li>
     </ul>
@@ -1545,6 +1616,8 @@
         <li><span class="parameter">failure</span>
             <span class="types"><span class="type">integer</span></span>
 
+
+
         </li>
     </ul>
 
@@ -1552,6 +1625,8 @@
     <ol>
 
            <span class="types"><span class="type">result</span></span>
+
+
 
     </ol>
 
@@ -1619,6 +1694,8 @@
         <li><span class="parameter">md_alg</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">evp_digest</span></span>
 
+
+
         </li>
     </ul>
 
@@ -1667,6 +1744,8 @@
 
            <span class="types"><span class="type">rs_req</span></span>
 
+
+
     </ol>
 
 
@@ -1685,7 +1764,7 @@
     <ul>
         <li><span class="parameter">serial_cb</span>
             <span class="types"><span class="type">function</span></span>
-         serial_cb with proto funciont(ts_resp_ctx, arg) return openssl.bn end
+         serial<em>cb with proto funciont(ts</em>resp_ctx, arg) return openssl.bn end
         </li>
     </ul>
 
@@ -1716,7 +1795,7 @@
     <ul>
         <li><span class="parameter">time_cb</span>
             <span class="types"><span class="type">function</span></span>
-         serial_cb with proto funciont(ts_resp_ctx, arg) return sec, usec end
+         serial<em>cb with proto funciont(ts</em>resp_ctx, arg) return sec, usec end
         </li>
     </ul>
 
@@ -1748,7 +1827,7 @@
     <ul>
         <li><span class="parameter">data</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a>, <span class="type">bio</span> or <span class="type">ts_req</span></span>
-         support string,bio ts_req content or ts_req object
+         support string,bio ts<em>req content or ts</em>req object
         </li>
     </ul>
 
@@ -1768,14 +1847,14 @@
     <strong>ts_resp_ctx:sign (data)</strong>
     </dt>
     <dd>
-    sign ts_req and get ts_resp, alias of create_response
+    sign ts<em>req and get ts</em>resp, alias of create_response
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">data</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a>, <span class="type">bio</span> or <span class="type">ts_req</span></span>
-         support string,bio ts_req content or ts_req object
+         support string,bio ts<em>req content or ts</em>req object
         </li>
     </ul>
 

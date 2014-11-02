@@ -3,8 +3,8 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <head>
-    <title>Reference</title>
-    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    <title>lua-openssl Docmentation</title>
+    <link rel="stylesheet" href="../ldoc_pale.css" type="text/css" />
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 <div id="navigation">
 <br/>
-<h1>ldoc</h1>
+<h1>lua-openssl</h1>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -60,6 +60,10 @@
   <li><a href="../modules/x509.name.html">x509.name</a></li>
   <li><a href="../modules/csr.html">csr</a></li>
 </ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/readme.md.html">readme</a></li>
+</ul>
 
 </div>
 
@@ -67,9 +71,7 @@
 
 <h1>Module <code>x509.attr</code></h1>
 <p>Provide x509_attribute as lua object.</p>
-<p>
- Sometime when you make CSR,TS or X509, you maybe need to use this.
-</p>
+<p> Sometime when you make CSR,TS or X509, you maybe need to use this.</p>
     <h3>Usage:</h3>
     <ul>
         <pre class="example">
@@ -86,7 +88,7 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#new_sk_attribute">new_sk_attribute (node_array)</a></td>
-	<td class="summary">Create stack_of_x509_attribute object, which mapping to STACK_OF(X509_ATTRIBUTE)</td>
+	<td class="summary">Create stack<em>of</em>x509<em>attribute object, which mapping to STACK</em>OF(X509_ATTRIBUTE)</td>
 	</tr>
 </table>
 <h2><a href="#Tables">Tables</a></h2>
@@ -120,11 +122,11 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#x509_attribute:object">x509_attribute:object ()</a></td>
-	<td class="summary">get asn1_object of x509_attribute.</td>
+	<td class="summary">get asn1<em>object of x509</em>attribute.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#x509_attribute:object">x509_attribute:object (obj)</a></td>
-	<td class="summary">set asn1_object for x509_attribute.</td>
+	<td class="summary">set asn1<em>object for x509</em>attribute.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#x509_attribute:data">x509_attribute:data (idx, attrtype)</a></td>
@@ -178,7 +180,7 @@
     <strong>new_sk_attribute (node_array)</strong>
     </dt>
     <dd>
-    Create stack_of_x509_attribute object, which mapping to STACK_OF(X509_ATTRIBUTE)
+    Create stack<em>of</em>x509<em>attribute object, which mapping to STACK</em>OF(X509_ATTRIBUTE)
 
 
     <h3>Parameters:</h3>
@@ -193,7 +195,7 @@
     <ol>
 
            <span class="types"><span class="type">sk_x509_attribute</span></span>
-        mapping to STACK_OF(X509_ATTRIBUTE) in openssl
+        mapping to STACK<em>OF(X509</em>ATTRIBUTE) in openssl
     </ol>
 
 
@@ -267,7 +269,7 @@
         </li>
         <li><span class="parameter">value</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-          if single, value is asn1_type or array have asn1_type node table
+          if single, value is asn1<em>type or array have asn1</em>type node table
         </li>
     </ul>
 
@@ -373,7 +375,7 @@
     <ol>
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-        asn1_type, asn1_type as table info
+        asn1<em>type, asn1</em>type as table info
     </ol>
      <h3>Or</h3>
     <ol>
@@ -395,7 +397,7 @@
     <strong>x509_attribute:object ()</strong>
     </dt>
     <dd>
-    get asn1_object of x509_attribute.
+    get asn1<em>object of x509</em>attribute.
 
 
 
@@ -415,13 +417,15 @@
     <strong>x509_attribute:object (obj)</strong>
     </dt>
     <dd>
-    set asn1_object for x509_attribute.
+    set asn1<em>object for x509</em>attribute.
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">obj</span>
             <span class="types"><span class="type">asn1_object</span></span>
+
+
 
         </li>
     </ul>
@@ -470,6 +474,8 @@
     <ol>
 
            <span class="types"><span class="type">asn1_string</span></span>
+
+
 
     </ol>
 

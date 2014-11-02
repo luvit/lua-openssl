@@ -3,8 +3,8 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <head>
-    <title>Reference</title>
-    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    <title>lua-openssl Docmentation</title>
+    <link rel="stylesheet" href="../ldoc_pale.css" type="text/css" />
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 <div id="navigation">
 <br/>
-<h1>ldoc</h1>
+<h1>lua-openssl</h1>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -60,6 +60,10 @@
   <li><a href="../modules/x509.name.html">x509.name</a></li>
   <li><a href="../modules/csr.html">csr</a></li>
 </ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/readme.md.html">readme</a></li>
+</ul>
 
 </div>
 
@@ -67,7 +71,9 @@
 
 <h1>Module <code>cipher</code></h1>
 <p>Provide cipher function in lua.</p>
-<p></p>
+<p>
+
+</p>
     <h3>Usage:</h3>
     <ul>
         <pre class="example">
@@ -88,15 +94,15 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#new">new (alg, encrypt, key[, iv[, pad[, engine]]])</a></td>
-	<td class="summary">get evp_cipher_ctx object for encrypt or decrypt</td>
+	<td class="summary">get evp<em>cipher</em>ctx object for encrypt or decrypt</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#encrypt_new">encrypt_new (alg, key[, iv[, pad[, engine]]])</a></td>
-	<td class="summary">get evp_cipher_ctx object for encrypt</td>
+	<td class="summary">get evp<em>cipher</em>ctx object for encrypt</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#decrypt_new">decrypt_new (alg, key[, iv[, pad[, engine]]])</a></td>
-	<td class="summary">get evp_cipher_ctx object for decrypt</td>
+	<td class="summary">get evp<em>cipher</em>ctx object for decrypt</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#cipher">cipher (alg, encrypt, input, key[, iv[, pad[, engine]]])</a></td>
@@ -139,22 +145,22 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#evp_cipher:new">evp_cipher:new (encrypt, key[, iv[, pad[, engine]]])</a></td>
-	<td class="summary">get evp_cipher_ctx to encrypt or decrypt</td>
+	<td class="summary">get evp<em>cipher</em>ctx to encrypt or decrypt</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#evp_cipher:encrypt_new">evp_cipher:encrypt_new (key[, iv[, pad[, engine]]])</a></td>
-	<td class="summary">get evp_cipher_ctx to encrypt</td>
+	<td class="summary">get evp<em>cipher</em>ctx to encrypt</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#evp_cipher:decrypt_new">evp_cipher:decrypt_new (encrypt, key[, iv[, pad[, engine]]])</a></td>
-	<td class="summary">get evp_cipher_ctx to decrypt</td>
+	<td class="summary">get evp<em>cipher</em>ctx to decrypt</td>
 	</tr>
 </table>
 <h2><a href="#Class_evp_cipher_ctx">Class evp_cipher_ctx </a></h2>
 <table class="function_list">
 	<tr>
 	<td class="name" nowrap><a href="#evp_cipher_ctx:info">evp_cipher_ctx:info ()</a></td>
-	<td class="summary">get infomation of evp_cipher_ctx object</td>
+	<td class="summary">get infomation of evp<em>cipher</em>ctx object</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#evp_cipher_ctx:update">evp_cipher_ctx:update (msg)</a></td>
@@ -235,7 +241,7 @@
     <strong>new (alg, encrypt, key[, iv[, pad[, engine]]])</strong>
     </dt>
     <dd>
-    get evp_cipher_ctx object for encrypt or decrypt
+    get evp<em>cipher</em>ctx object for encrypt or decrypt
 
 
     <h3>Parameters:</h3>
@@ -255,6 +261,8 @@
         <li><span class="parameter">iv</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
         <li><span class="parameter">pad</span>
             <span class="types"><span class="type">boolean</span></span>
@@ -270,7 +278,7 @@
     <ol>
 
            <span class="types"><span class="type">evp_cipher_ctx</span></span>
-        cipher object mapping EVP_CIPHER_CTX in openssl
+        cipher object mapping EVP<em>CIPHER</em>CTX in openssl
     </ol>
 
 
@@ -286,7 +294,7 @@
     <strong>encrypt_new (alg, key[, iv[, pad[, engine]]])</strong>
     </dt>
     <dd>
-    get evp_cipher_ctx object for encrypt
+    get evp<em>cipher</em>ctx object for encrypt
 
 
     <h3>Parameters:</h3>
@@ -301,6 +309,8 @@
         </li>
         <li><span class="parameter">iv</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
         </li>
         <li><span class="parameter">pad</span>
@@ -317,7 +327,7 @@
     <ol>
 
            <span class="types"><span class="type">evp_cipher_ctx</span></span>
-        cipher object mapping EVP_CIPHER_CTX in openssl
+        cipher object mapping EVP<em>CIPHER</em>CTX in openssl
     </ol>
 
 
@@ -333,7 +343,7 @@
     <strong>decrypt_new (alg, key[, iv[, pad[, engine]]])</strong>
     </dt>
     <dd>
-    get evp_cipher_ctx object for decrypt
+    get evp<em>cipher</em>ctx object for decrypt
 
 
     <h3>Parameters:</h3>
@@ -348,6 +358,8 @@
         </li>
         <li><span class="parameter">iv</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
         </li>
         <li><span class="parameter">pad</span>
@@ -364,7 +376,7 @@
     <ol>
 
            <span class="types"><span class="type">evp_cipher_ctx</span></span>
-        cipher object mapping EVP_CIPHER_CTX in openssl
+        cipher object mapping EVP<em>CIPHER</em>CTX in openssl
     </ol>
 
 
@@ -403,6 +415,8 @@
         </li>
         <li><span class="parameter">iv</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
         </li>
         <li><span class="parameter">pad</span>
@@ -455,6 +469,8 @@
         <li><span class="parameter">iv</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
         <li><span class="parameter">pad</span>
             <span class="types"><span class="type">boolean</span></span>
@@ -501,6 +517,8 @@
         </li>
         <li><span class="parameter">iv</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
         </li>
         <li><span class="parameter">pad</span>
@@ -549,6 +567,8 @@
         <li><span class="parameter">iv</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
         <li><span class="parameter">pad</span>
             <span class="types"><span class="type">boolean</span></span>
@@ -588,7 +608,7 @@
     <ol>
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-        info keys include name,block_size,key_length,iv_length,flags,mode
+        info keys include name,block<em>size,key</em>length,iv_length,flags,mode
     </ol>
 
 
@@ -658,6 +678,8 @@
         <li><span class="parameter">iv</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
         <li><span class="parameter">pad</span>
             <span class="types"><span class="type">boolean</span></span>
@@ -700,6 +722,8 @@
         </li>
         <li><span class="parameter">iv</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
         </li>
         <li><span class="parameter">pad</span>
@@ -744,6 +768,8 @@
         <li><span class="parameter">iv</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
         <li><span class="parameter">pad</span>
             <span class="types"><span class="type">boolean</span></span>
@@ -771,7 +797,7 @@
     <strong>evp_cipher:new (encrypt, key[, iv[, pad[, engine]]])</strong>
     </dt>
     <dd>
-    get evp_cipher_ctx to encrypt or decrypt
+    get evp<em>cipher</em>ctx to encrypt or decrypt
 
 
     <h3>Parameters:</h3>
@@ -786,6 +812,8 @@
         </li>
         <li><span class="parameter">iv</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
         </li>
         <li><span class="parameter">pad</span>
@@ -802,7 +830,7 @@
     <ol>
 
            <span class="types"><span class="type">evp_cipher_ctx</span></span>
-        evp_cipher_ctx object
+        evp<em>cipher</em>ctx object
     </ol>
 
 
@@ -818,7 +846,7 @@
     <strong>evp_cipher:encrypt_new (key[, iv[, pad[, engine]]])</strong>
     </dt>
     <dd>
-    get evp_cipher_ctx to encrypt
+    get evp<em>cipher</em>ctx to encrypt
 
 
     <h3>Parameters:</h3>
@@ -829,6 +857,8 @@
         </li>
         <li><span class="parameter">iv</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
         </li>
         <li><span class="parameter">pad</span>
@@ -845,7 +875,7 @@
     <ol>
 
            <span class="types"><span class="type">evp_cipher_ctx</span></span>
-        evp_cipher_ctx object
+        evp<em>cipher</em>ctx object
     </ol>
 
 
@@ -861,7 +891,7 @@
     <strong>evp_cipher:decrypt_new (encrypt, key[, iv[, pad[, engine]]])</strong>
     </dt>
     <dd>
-    get evp_cipher_ctx to decrypt
+    get evp<em>cipher</em>ctx to decrypt
 
 
     <h3>Parameters:</h3>
@@ -876,6 +906,8 @@
         </li>
         <li><span class="parameter">iv</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
         </li>
         <li><span class="parameter">pad</span>
@@ -892,7 +924,7 @@
     <ol>
 
            <span class="types"><span class="type">evp_cipher_ctx</span></span>
-        evp_cipher_ctx object
+        evp<em>cipher</em>ctx object
     </ol>
 
 
@@ -912,7 +944,7 @@
     <strong>evp_cipher_ctx:info ()</strong>
     </dt>
     <dd>
-    get infomation of evp_cipher_ctx object
+    get infomation of evp<em>cipher</em>ctx object
 
 
 
@@ -920,7 +952,7 @@
     <ol>
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
-        info keys include block_size,key_length,iv_length,flags,mode,nid,type, evp_cipher
+        info keys include block<em>size,key</em>length,iv<em>length,flags,mode,nid,type, evp</em>cipher
     </ol>
 
 

@@ -3,8 +3,8 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <head>
-    <title>Reference</title>
-    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+    <title>lua-openssl Docmentation</title>
+    <link rel="stylesheet" href="../ldoc_pale.css" type="text/css" />
 </head>
 <body>
 
@@ -24,7 +24,7 @@
 
 <div id="navigation">
 <br/>
-<h1>ldoc</h1>
+<h1>lua-openssl</h1>
 
 <ul>
   <li><a href="../index.html">Index</a></li>
@@ -59,6 +59,10 @@
   <li><a href="../modules/x509.name.html">x509.name</a></li>
   <li><a href="../modules/csr.html">csr</a></li>
 </ul>
+<h2>Topics</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../topics/readme.md.html">readme</a></li>
+</ul>
 
 </div>
 
@@ -66,7 +70,9 @@
 
 <h1>Module <code>pkcs7</code></h1>
 <p>Provide pkcs7 function in lua.</p>
-<p></p>
+<p>
+
+</p>
     <h3>Usage:</h3>
     <ul>
         <pre class="example">
@@ -139,6 +145,8 @@
         <li><span class="parameter">input</span>
             <span class="types"><span class="type">bio</span> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
         </li>
         <li><span class="parameter">allow</span>
             <span class="types"><span class="type">format</span></span>
@@ -178,25 +186,37 @@
         <li><span class="parameter">msg</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">bio</span></span>
 
+
+
         </li>
         <li><span class="parameter">sigcert</span>
             <span class="types"><span class="type">x509</span></span>
+
+
 
         </li>
         <li><span class="parameter">signkey</span>
             <span class="types"><span class="type">evp_pkey</span></span>
 
+
+
         </li>
         <li><span class="parameter">cacerts</span>
             <span class="types"><span class="type">stack_of_x509</span></span>
+
+
 
         </li>
         <li><span class="parameter">msg</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">bio</span></span>
 
+
+
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
          (<em>default</em> 0)
         </li>
@@ -226,21 +246,31 @@
         <li><span class="parameter">in</span>
             <span class="types"><a class="type" href="../modules/pkcs7.html#pkcs7">pkcs7</a></span>
 
+
+
         </li>
         <li><span class="parameter">signercerts</span>
             <span class="types"><span class="type">stack_of_x509</span></span>
+
+
 
         </li>
         <li><span class="parameter">cacerts</span>
             <span class="types"><span class="type">stack_of_x509</span></span>
 
+
+
         </li>
         <li><span class="parameter">msg</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">bio</span></span>
 
+
+
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
          (<em>default</em> 0)
         </li>
@@ -273,18 +303,26 @@
         <li><span class="parameter">msg</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">bio</span></span>
 
+
+
         </li>
         <li><span class="parameter">recipcerts</span>
             <span class="types"><span class="type">stack_of_x509</span></span>
+
+
 
         </li>
         <li><span class="parameter">cipher</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">evp_cipher</span></span>
 
+
+
          (<em>default</em> 'rc4')
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
         </li>
     </ul>
@@ -307,13 +345,19 @@
         <li><span class="parameter">input</span>
             <span class="types"><a class="type" href="../modules/pkcs7.html#pkcs7">pkcs7</a></span>
 
+
+
         </li>
         <li><span class="parameter">recipcert</span>
             <span class="types"><span class="type">x509</span></span>
 
+
+
         </li>
         <li><span class="parameter">recipkey</span>
             <span class="types"><span class="type">evp_pkey</span></span>
+
+
 
         </li>
     </ul>
@@ -355,6 +399,8 @@
 
            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
     </ol>
 
 
@@ -394,21 +440,31 @@
         <li><span class="parameter">signercerts</span>
             <span class="types"><span class="type">stack_of_x509</span></span>
 
+
+
         </li>
         <li><span class="parameter">cacerts</span>
             <span class="types"><span class="type">stack_of_x509</span></span>
+
+
 
         </li>
         <li><span class="parameter">extracerts</span>
             <span class="types"><span class="type">stack_of_x509</span></span>
 
+
+
         </li>
         <li><span class="parameter">msg</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">bio</span></span>
 
+
+
         </li>
         <li><span class="parameter">flags</span>
             <span class="types"><span class="type">number</span></span>
+
+
 
          (<em>default</em> 0)
         </li>
@@ -441,9 +497,13 @@
         <li><span class="parameter">recipcert</span>
             <span class="types"><span class="type">x509</span></span>
 
+
+
         </li>
         <li><span class="parameter">recipkey</span>
             <span class="types"><span class="type">evp_pkey</span></span>
+
+
 
         </li>
     </ul>
