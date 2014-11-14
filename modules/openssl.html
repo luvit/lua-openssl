@@ -87,6 +87,10 @@
 	<td class="summary">hex encode or decode string</td>
 	</tr>
 	<tr>
+	<td class="name" nowrap><a href="#base64">base64 (input[, encode=true])</a></td>
+	<td class="summary">base64 encode or decode</td>
+	</tr>
+	<tr>
 	<td class="name" nowrap><a href="#list">list (type)</a></td>
 	<td class="summary">get method names</td>
 	</tr>
@@ -138,6 +142,42 @@
     <ul>
         <li><span class="parameter">str</span>
             <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+
+        </li>
+        <li><span class="parameter">encode</span>
+            <span class="types"><span class="type">boolean</span></span>
+         true to encoed, false to decode
+         (<em>default</em> true)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "base64"></a>
+    <strong>base64 (input[, encode=true])</strong>
+    </dt>
+    <dd>
+    base64 encode or decode
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">input</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">bio</span></span>
 
 
 
