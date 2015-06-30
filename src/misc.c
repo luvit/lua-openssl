@@ -43,7 +43,7 @@ BIO* load_bio_object(lua_State* L, int idx)
 
 int  bio_is_der(BIO* bio)
 {
-  byte head[2];
+  byte head[1];
   int len = BIO_read(bio, head, sizeof(head));
   BIO_reset(bio);
   if (len == sizeof(head) && head[0] == 0x30)
